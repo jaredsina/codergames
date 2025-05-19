@@ -28,7 +28,6 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import PersonIcon from '@mui/icons-material/Person';
 import CasinoIcon from '@mui/icons-material/Casino';
 import BadgeIcon from '@mui/icons-material/Badge';
-import LoopIcon from '@mui/icons-material/Loop';
 import { Team } from '../types/index.ts';
 
 type Category = 'Python' | 'Scratch' | 'HTML/CSS/Javascript';
@@ -338,23 +337,21 @@ const Home = () => {
               </ListItemIcon>
               <ListItemText primary="Each team must have a unique team name." />
             </ListItem>
+            
             <ListItem>
               <ListItemIcon>
-                <LoopIcon />
+                <CasinoIcon />
               </ListItemIcon>
-              <ListItemText primary="The game is split into rounds. Each round has a set of questions." />
+              <ListItemText 
+                primary="Before each round, each team will roll a dice to determine their difficulty level."
+                secondary="1-2: Easy, 3-4: Medium, 5-6: Hard"
+              />
             </ListItem>
             <ListItem>
               <ListItemIcon>
                 <CasinoIcon />
               </ListItemIcon>
-              <ListItemText primary="Before each round, each team will roll a dice to determine their difficulty level." />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <CasinoIcon />
-              </ListItemIcon>
-              <ListItemText primary="Before each round, each team will roll a dice to determine if they can get coach help." secondary="If the team rolls a 1, they can get coach help. That's a 10% chance." />
+              <ListItemText primary="Before each round, each team will roll a dice to determine if they can get coach help." secondary="If the team rolls a 1 or 2 or 3, they can get coach help. That's a 30% chance." />
             </ListItem>
           </List>
         </Paper>

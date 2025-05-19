@@ -10,6 +10,7 @@ import {
   CircularProgress,
 } from '@mui/material';
 import { GameState } from '../types';
+import React from 'react';
 
 type Category = 'Python' | 'Scratch' | 'HTML/CSS/Javascript';
 type Difficulty = 'easy' | 'medium' | 'hard';
@@ -194,7 +195,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 11,
     "type": "implement",
-    "content": "What is the output of this code?\n\n```python\nx = [1, 2, 3]\nprint(x[-1])\n```",
+    "content": "What is the output of this code?\n\nx = [1, 2, 3]\nprint(x[-1])\n",
     "correctAnswer": "3",
     "choices": ["3", "1", "2", "IndexError"],
     "points": 10,
@@ -205,7 +206,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 12,
     "type": "implement",
-    "content": "What does this code print?\n\n```python\nfor i in range(1, 4):\n    print(i * '*')\n```",
+    "content": "What does this code print?\n\nfor i in range(1, 4):\n    print(i * '*')",
     "correctAnswer": "*\n**\n***",
     "choices": ["*\n**\n***", "*\n*\n*", "***", "SyntaxError"],
     "points": 10,
@@ -238,7 +239,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 15,
     "type": "implement",
-    "content": "What is the output of:\n\n```python\nx = [1, 2, 3]\nx.append([4, 5])\nprint(x)\n```",
+    "content": "What is the output of:\n\nx = [1, 2, 3]\nx.append([4, 5])\nprint(x)\n",
     "correctAnswer": "[1, 2, 3, [4, 5]]",
     "choices": ["[1, 2, 3, 4, 5]", "[1, 2, 3, [4, 5]]", "[1, 2, 3, 4]", "[1, 2, 3]"],
     "points": 10,
@@ -293,7 +294,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 20,
     "type": "implement",
-    "content": "What does this function return?\n\n```python\ndef mystery(a):\n    return a[::-1]\n```\n\nWhat will `mystery('abc')` return?",
+    "content": "What does this function return?\n\ndef mystery(a):\n    return a[::-1]\n\nWhat will `mystery('abc')` return?",
     "correctAnswer": "'cba'",
     "choices": ["['c', 'b', 'a']", "'abc'", "'cba'", "None"],
     "points": 10,
@@ -306,7 +307,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 21,
     "type": "implement",
-    "content": "What is the output?\n\n```python\ndef func(a, b=[]):\n    b.append(a)\n    return b\n\nprint(func(1))\nprint(func(2))\n```",
+    "content": "What is the output?\n\ndef func(a, b=[]):\n    b.append(a)\n    return b\n\nprint(func(1))\nprint(func(2))",
     "correctAnswer": "[1]\n[1, 2]",
     "choices": ["[1]\n[1, 2]", "[1]\n[2]", "[1, 2]\n[1, 2]", "[1]\n[1]"],
     "points": 15,
@@ -317,7 +318,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 22,
     "type": "implement",
-    "content": "What is the output of this code?\n\n```python\nx = [1, 2, 3]\ny = x\nx[0] = 99\nprint(y)\n```",
+    "content": "What is the output of this code?\n\nx = [1, 2, 3]\ny = x\nx[0] = 99\nprint(y)\n",
     "correctAnswer": "[99, 2, 3]",
     "choices": ["[99, 2, 3]", "[1, 2, 3]", "[0, 2, 3]", "Error"],
     "points": 15,
@@ -339,7 +340,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 24,
     "type": "implement",
-    "content": "What is the output?\n\n```python\nx = (i*i for i in range(3))\nprint(list(x))\nprint(list(x))\n```",
+    "content": "What is the output?\n\nx = (i*i for i in range(3))\nprint(list(x))\nprint(list(x))\n",
     "correctAnswer": "[0, 1, 4]\n[]",
     "choices": ["[0, 1, 4]\n[]", "[0, 1, 4]\n[0, 1, 4]", "[0, 1, 4]\nNone", "Error"],
     "points": 15,
@@ -350,7 +351,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 25,
     "type": "implement",
-    "content": "What does this code return?\n\n```python\nprint(''.join(sorted('cab')))\n```",
+    "content": "What does this code return?\n\nprint(''.join(sorted('cab')))\n",
     "correctAnswer": "abc",
     "choices": ["abc", "cab", "bac", "None"],
     "points": 15,
@@ -361,7 +362,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 26,
     "type": "implement",
-    "content": "What is the output?\n\n```python\ndef foo(x, y):\n    return x if x > y else y\nprint(foo(3, 5))\n```",
+    "content": "What is the output?\n\ndef foo(x, y):\n    return x if x > y else y\nprint(foo(3, 5))",
     "correctAnswer": "5",
     "choices": ["3", "5", "True", "None"],
     "points": 15,
@@ -383,7 +384,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 28,
     "type": "implement",
-    "content": "What is the result of:\n\n```python\nprint(0.1 + 0.2 == 0.3)\n```",
+    "content": "What is the result of:\n\nprint(0.1 + 0.2 == 0.3)\n",
     "correctAnswer": "False",
     "choices": ["False", "True", "0.3", "Error"],
     "points": 15,
@@ -394,7 +395,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 29,
     "type": "implement",
-    "content": "What will be printed?\n\n```python\nx = [1, 2, 3]\nprint(x.pop(1))\nprint(x)\n```",
+    "content": "What will be printed?\n\nx = [1, 2, 3]\nprint(x.pop(1))\nprint(x)\n",
     "correctAnswer": "2\n[1, 3]",
     "choices": ["2\n[1, 3]", "1\n[2, 3]", "3\n[1, 2]", "[1, 2]"],
     "points": 15,
@@ -405,7 +406,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 30,
     "type": "implement",
-    "content": "What is the output?\n\n```python\ndef add_items(a, b=[]):\n    b.append(a)\n    return b\n\nprint(add_items(1))\nprint(add_items(2))\n```",
+    "content": "What is the output?\n\ndef add_items(a, b=[]):\n    b.append(a)\n    return b\n\nprint(add_items(1))\nprint(add_items(2))",
     "correctAnswer": "[1]\n[1, 2]",
     "choices": ["[1]\n[1, 2]", "[1, 2]\n[2]", "[2]\n[2]", "[1]\n[2]"],
     "points": 15,
@@ -1256,8 +1257,8 @@ const Game = () => {
       setCoachDiceResult(finalResult);
       setIsRollingCoach(false);
       setHasRolledCoach(true);
-      // Set coach help if coach dice is 1 (10% chance)
-      setHasCoachHelp(finalResult === 1);
+      // Set coach help if coach dice is 1, 2, or 3 (30% chance)
+      setHasCoachHelp(finalResult <= 3);
     }, 1000);
   };
 
@@ -1717,7 +1718,24 @@ const Game = () => {
                 </Typography>
               )}
               <Typography variant="h6" gutterBottom>
-                {currentQuestions[gameState.currentQuestion].content}
+                {currentQuestions[gameState.currentQuestion].content.split('\n').map((line, i) => {
+                  // Check if the line is part of a code block (indented)
+                  const isCodeLine = line.startsWith('    ') || line.startsWith('\t');
+                  return (
+                    <React.Fragment key={i}>
+                      {isCodeLine ? (
+                        <div style={{ paddingLeft: '2em' }}>
+                          {line.trim()}
+                        </div>
+                      ) : (
+                        <>
+                          {line}
+                          <br />
+                        </>
+                      )}
+                    </React.Fragment>
+                  );
+                })}
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
                 {currentQuestions[gameState.currentQuestion].choices.map((choice, index) => (
