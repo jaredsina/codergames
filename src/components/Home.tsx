@@ -29,9 +29,9 @@ import PersonIcon from '@mui/icons-material/Person';
 import CasinoIcon from '@mui/icons-material/Casino';
 import BadgeIcon from '@mui/icons-material/Badge';
 import LoopIcon from '@mui/icons-material/Loop';
-import { Team } from '../types';
+import { Team } from '../types/index.ts';
 
-type Category = 'PixelPad' | 'Python' | 'Scratch' | 'HTML/CSS/Javascript';
+type Category = 'Python' | 'Scratch' | 'HTML/CSS/Javascript';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -243,7 +243,7 @@ const Home = () => {
                       </Box>
                       
                       <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
-                        {team.members.map((member, index) => (
+                        {team.members.map((member: string, index: number) => (
                           <Chip
                             key={index}
                             label={member}
@@ -277,7 +277,6 @@ const Home = () => {
                 label="Select Category"
                 onChange={(e) => setSelectedCategory(e.target.value as Category)}
               >
-                <MenuItem value="PixelPad">PixelPad</MenuItem>
                 <MenuItem value="Python">Python</MenuItem>
                 <MenuItem value="Scratch">Scratch</MenuItem>
                 <MenuItem value="HTML/CSS/Javascript">HTML/CSS/Javascript</MenuItem>

@@ -1,8 +1,8 @@
 export interface Team {
   id: string;
   name: string;
-  score: number;
   members: string[];
+  score: number;
 }
 
 export interface Question {

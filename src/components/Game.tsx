@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Container,
@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import { GameState } from '../types';
 
-type Category = 'PixelPad' | 'Python' | 'Scratch' | 'HTML/CSS/Javascript';
+type Category = 'Python' | 'Scratch' | 'HTML/CSS/Javascript';
 type Difficulty = 'easy' | 'medium' | 'hard';
 
 interface Question {
@@ -27,158 +27,6 @@ interface Question {
 }
 
 const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
-  'PixelPad': {
-    'easy': [
-      {
-        id: 1,
-        type: 'implement',
-        content: 'How would you draw a square in PixelPad?',
-        correctAnswer: 'Use the rectangle tool with equal width and height',
-        points: 10,
-        timeLimit: 30,
-        category: 'PixelPad',
-        difficulty: 'easy',
-        choices: [
-          'Use the rectangle tool with equal width and height',
-          'Use the circle tool and stretch it',
-          'Draw four separate lines',
-          'Use the polygon tool with 4 sides'
-        ]
-      },
-      {
-        id: 2,
-        type: 'fix',
-        content: 'What is wrong with this PixelPad code: `drawCircle(50, 50, 100)`?',
-        correctAnswer: 'Missing color parameter',
-        points: 10,
-        timeLimit: 30,
-        category: 'PixelPad',
-        difficulty: 'easy',
-        choices: [
-          'Missing color parameter',
-          'Wrong order of parameters',
-          'Too many parameters',
-          'Circle size is too large'
-        ]
-      },
-      {
-        id: 3,
-        type: 'explain',
-        content: 'What is the purpose of the fill() function in PixelPad?',
-        correctAnswer: 'To fill a shape with color',
-        points: 10,
-        timeLimit: 30,
-        category: 'PixelPad',
-        difficulty: 'easy',
-        choices: [
-          'To fill a shape with color',
-          'To clear the canvas',
-          'To save the drawing',
-          'To change the background color'
-        ]
-      }
-    ],
-    'medium': [
-      {
-        id: 4,
-        type: 'implement',
-        content: 'How would you create a gradient effect in PixelPad?',
-        correctAnswer: 'Use multiple rectangles with slightly different colors',
-        points: 20,
-        timeLimit: 45,
-        category: 'PixelPad',
-        difficulty: 'medium',
-        choices: [
-          'Use multiple rectangles with slightly different colors',
-          'Use the gradient tool',
-          'Draw diagonal lines',
-          'Use the blur effect'
-        ]
-      },
-      {
-        id: 5,
-        type: 'fix',
-        content: 'What is wrong with this PixelPad code: `drawLine(0, 0, 100, 100, "red", 5)`?',
-        correctAnswer: 'Too many parameters',
-        points: 20,
-        timeLimit: 45,
-        category: 'PixelPad',
-        difficulty: 'medium',
-        choices: [
-          'Too many parameters',
-          'Wrong order of parameters',
-          'Missing color parameter',
-          'Line is too long'
-        ]
-      },
-      {
-        id: 6,
-        type: 'explain',
-        content: 'What is the difference between stroke() and fill() in PixelPad?',
-        correctAnswer: 'stroke() draws the outline, fill() fills the shape',
-        points: 20,
-        timeLimit: 45,
-        category: 'PixelPad',
-        difficulty: 'medium',
-        choices: [
-          'stroke() draws the outline, fill() fills the shape',
-          'stroke() is for text, fill() is for shapes',
-          'stroke() is faster than fill()',
-          'stroke() is for 3D, fill() is for 2D'
-        ]
-      }
-    ],
-    'hard': [
-      {
-        id: 7,
-        type: 'implement',
-        content: 'How would you implement a pixel art animation in PixelPad?',
-        correctAnswer: 'Use multiple frames and the animate() function',
-        points: 30,
-        timeLimit: 60,
-        category: 'PixelPad',
-        difficulty: 'hard',
-        choices: [
-          'Use multiple frames and the animate() function',
-          'Use the animation tool',
-          'Draw each frame manually',
-          'Use the timeline feature'
-        ]
-      },
-      {
-        id: 8,
-        type: 'fix',
-        content: 'What is wrong with this PixelPad animation code: `animate(frames, 1000)`?',
-        correctAnswer: 'Missing frame rate parameter',
-        points: 30,
-        timeLimit: 60,
-        category: 'PixelPad',
-        difficulty: 'hard',
-        choices: [
-          'Missing frame rate parameter',
-          'Wrong order of parameters',
-          'Animation duration is too long',
-          'Missing frame array'
-        ]
-      },
-      {
-        id: 9,
-        type: 'explain',
-        content: 'What is the purpose of the layer system in PixelPad?',
-        correctAnswer: 'To organize and manage different elements of the drawing',
-        points: 30,
-        timeLimit: 60,
-        category: 'PixelPad',
-        difficulty: 'hard',
-        choices: [
-          'To organize and manage different elements of the drawing',
-          'To create 3D effects',
-          'To improve performance',
-          'To add special effects'
-        ]
-      }
-    ]
-  },
   'Python': {
     'easy': [
       {
@@ -627,7 +475,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   {
     "id": 36,
     "type": "implement",
-    "content": "Which block changes the sprite’s costume?",
+    "content": "Which block changes the sprite's costume?",
     "correctAnswer": "next costume",
     "choices": ["change color effect by 25", "go to front layer", "next costume", "switch backdrop to"],
     "points": 5,
@@ -907,153 +755,389 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   },
   'HTML/CSS/Javascript': {
     'easy': [
-      {
-        id: 28,
-        type: 'implement',
-        content: 'How would you center a div horizontally in CSS?',
-        correctAnswer: 'Use margin: 0 auto',
-        points: 10,
-        timeLimit: 30,
-        category: 'HTML/CSS/Javascript',
-        difficulty: 'easy',
-        choices: [
-          'Use margin: 0 auto',
-          'Use text-align: center',
-          'Use position: center',
-          'Use align: center'
-        ]
-      },
-      {
-        id: 29,
-        type: 'fix',
-        content: 'What is wrong with this HTML: `<div class="container" id="main">Content</div>`?',
-        correctAnswer: 'Nothing is wrong',
-        points: 10,
-        timeLimit: 30,
-        category: 'HTML/CSS/Javascript',
-        difficulty: 'easy',
-        choices: [
-          'Nothing is wrong',
-          'Missing closing tag',
-          'Wrong attribute order',
-          'Missing quotes'
-        ]
-      },
-      {
-        id: 30,
-        type: 'explain',
-        content: 'What is the purpose of the DOM in JavaScript?',
-        correctAnswer: 'To represent and manipulate HTML documents',
-        points: 10,
-        timeLimit: 30,
-        category: 'HTML/CSS/Javascript',
-        difficulty: 'easy',
-        choices: [
-          'To represent and manipulate HTML documents',
-          'To style web pages',
-          'To handle server requests',
-          'To create animations'
-        ]
-      }
-    ],
+  {
+    "id": 61,
+    "content": "Which HTML tag is used to create a hyperlink?",
+    "correctAnswer": "<a>",
+    "choices": ["<link>", "<a>", "<href>", "<hyperlink>"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "HTML/CSS/Javascript",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 62,
+    "content": "What CSS property changes the background color of an element?",
+    "correctAnswer": "background-color",
+    "choices": ["color", "background-color", "bgcolor", "background"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "HTML/CSS/Javascript",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 63,
+    "content": "Which HTML tag is used to define the main heading on a webpage?",
+    "correctAnswer": "<h1>",
+    "choices": ["<head>", "<h1>", "<header>", "<title>"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "HTML/CSS/Javascript",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 64,
+    "content": "How do you add a comment in JavaScript?",
+    "correctAnswer": "// This is a comment",
+    "choices": ["<!-- comment -->", "// This is a comment", "# This is a comment", "/* comment */"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "HTML/CSS/Javascript",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 65,
+    "content": "Which CSS property controls the text size?",
+    "correctAnswer": "font-size",
+    "choices": ["text-size", "font-style", "font-size", "text-style"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "HTML/CSS/Javascript",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 66,
+    "content": "Which JavaScript function outputs a message to the web console?",
+    "correctAnswer": "console.log()",
+    "choices": ["alert()", "console.log()", "print()", "write()"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "HTML/CSS/Javascript",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 67,
+    "content": "In HTML, what attribute is used to specify an image URL?",
+    "correctAnswer": "src",
+    "choices": ["href", "src", "link", "url"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "HTML/CSS/Javascript",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 68,
+    "content": "How do you select an element with the id 'header' in CSS?",
+    "correctAnswer": "#header",
+    "choices": [".header", "#header", "header", "*header"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "HTML/CSS/Javascript",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 69,
+    "content": "Which tag is used to add JavaScript code inside an HTML file?",
+    "correctAnswer": "<script>",
+    "choices": ["<js>", "<javascript>", "<script>", "<code>"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "HTML/CSS/Javascript",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 70,
+    "content": "How do you make text bold using HTML?",
+    "correctAnswer": "<b>",
+    "choices": ["<bold>", "<b>", "<strong>", "<font-weight>"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "HTML/CSS/Javascript",
+    "difficulty": "easy",
+    "type": "implement"
+  }
+],
     'medium': [
       {
-        id: 31,
-        type: 'implement',
-        content: 'How would you create a responsive grid layout in CSS?',
-        correctAnswer: 'Use CSS Grid or Flexbox',
-        points: 20,
-        timeLimit: 45,
-        category: 'HTML/CSS/Javascript',
-        difficulty: 'medium',
-        choices: [
-          'Use CSS Grid or Flexbox',
-          'Use tables',
-          'Use floats',
-          'Use absolute positioning'
-        ]
+        "id": 71,
+        "content": "Which CSS rule would make all <p> elements have blue text?",
+        "correctAnswer": "p { color: blue; }",
+        "choices": ["p { text-color: blue; }", "p.color = blue;", "p { color: blue; }", "<p style='blue'>"],
+        "points": 5,
+        "timeLimit": 45,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "medium",
+        "type": "implement"
       },
       {
-        id: 32,
-        type: 'fix',
-        content: 'What is wrong with this JavaScript: `function add(a, b) { return a + b }`?',
-        correctAnswer: 'Missing semicolon',
-        points: 20,
-        timeLimit: 45,
-        category: 'HTML/CSS/Javascript',
-        difficulty: 'medium',
-        choices: [
-          'Missing semicolon',
-          'Wrong function syntax',
-          'Missing parentheses',
-          'Wrong return statement'
-        ]
+        "id": 72,
+        "content": "What will the following JavaScript code output?\n`console.log(2 + '2');`",
+        "correctAnswer": "'22'",
+        "choices": ["'22'", "4", "NaN", "undefined"],
+        "points": 5,
+        "timeLimit": 45,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "medium",
+        "type": "implement"
       },
       {
-        id: 33,
-        type: 'explain',
-        content: 'What is the difference between let and var in JavaScript?',
-        correctAnswer: 'let has block scope, var has function scope',
-        points: 20,
-        timeLimit: 45,
-        category: 'HTML/CSS/Javascript',
-        difficulty: 'medium',
-        choices: [
-          'let has block scope, var has function scope',
-          'let is newer than var',
-          'var is faster than let',
-          'let is for numbers, var is for strings'
-        ]
+        "id": 73,
+        "content": "How do you correctly link a CSS file in HTML?",
+        "correctAnswer": "<link rel=\"stylesheet\" href=\"style.css\">",
+        "choices": ["<css>style.css</css>", "<link src=\"style.css\">", "<link rel=\"stylesheet\" href=\"style.css\">", "<style src='style.css'>"],
+        "points": 5,
+        "timeLimit": 45,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 74,
+        "content": "Which JavaScript keyword is used to declare a variable that can be reassigned?",
+        "correctAnswer": "let",
+        "choices": ["const", "let", "var", "reassign"],
+        "points": 5,
+        "timeLimit": 45,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 75,
+        "content": "What does 'display: flex;' do in CSS?",
+        "correctAnswer": "Enables flexible layout for child elements",
+        "choices": ["Adds spacing", "Hides the element", "Enables flexible layout for child elements", "Applies grid layout"],
+        "points": 5,
+        "timeLimit": 45,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 76,
+        "content": "What is the output of:\n`let x = 5;\nconsole.log(++x);`",
+        "correctAnswer": "6",
+        "choices": ["5", "6", "x", "undefined"],
+        "points": 5,
+        "timeLimit": 45,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 77,
+        "content": "Which of the following is a valid CSS class selector?",
+        "correctAnswer": ".myClass",
+        "choices": [".myClass", "#myClass", "myClass()", "<class='myClass'>"],
+        "points": 5,
+        "timeLimit": 45,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 78,
+        "content": "Which method adds an item to the end of a JavaScript array?",
+        "correctAnswer": "push()",
+        "choices": ["append()", "push()", "addToEnd()", "insert()"],
+        "points": 5,
+        "timeLimit": 45,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 79,
+        "content": "What does the `alt` attribute in an <img> tag provide?",
+        "correctAnswer": "Text description if the image doesn't load",
+        "choices": ["Image size", "Text description if the image doesn't load", "A tooltip", "URL of the image"],
+        "points": 5,
+        "timeLimit": 45,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 80,
+        "content": "How can you make a function in JavaScript?",
+        "correctAnswer": "function myFunction() {}",
+        "choices": ["function:myFunction{}", "function myFunction() {}", "myFunction = function[]", "make function myFunction()"],
+        "points": 5,
+        "timeLimit": 45,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "medium",
+        "type": "implement"
       }
     ],
     'hard': [
       {
-        id: 34,
-        type: 'implement',
-        content: 'How would you implement a custom hook in React?',
-        correctAnswer: 'Create a function that uses other hooks',
-        points: 30,
-        timeLimit: 60,
-        category: 'HTML/CSS/Javascript',
-        difficulty: 'hard',
-        choices: [
-          'Create a function that uses other hooks',
-          'Use the useCustom hook',
-          'Extend the React class',
-          'Use a higher-order component'
-        ]
+        "id": 81,
+        "content": "What is the difference between `==` and `===` in JavaScript?",
+        "correctAnswer": "`===` checks both value and type, while `==` checks only value with type coercion.",
+        "choices": [
+          "`==` checks both value and type, `===` only checks value.",
+          "`===` is only used in arrays.",
+          "`===` checks both value and type, while `==` checks only value with type coercion.",
+          "They are interchangeable."
+        ],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "hard",
+        "type": "implement"
       },
       {
-        id: 35,
-        type: 'fix',
-        content: 'What is wrong with this React code: `function Component() { return <div>Hello</div> }`?',
-        correctAnswer: 'Missing export statement',
-        points: 30,
-        timeLimit: 60,
-        category: 'HTML/CSS/Javascript',
-        difficulty: 'hard',
-        choices: [
-          'Missing export statement',
-          'Wrong function syntax',
-          'Missing parentheses',
-          'Wrong JSX syntax'
-        ]
+        "id": 82,
+        "content": "What does `event.preventDefault()` do in JavaScript?",
+        "correctAnswer": "Prevents the default behavior of the event from occurring",
+        "choices": [
+          "Cancels the event entirely",
+          "Pauses the event handler",
+          "Prevents the default behavior of the event from occurring",
+          "Refreshes the page"
+        ],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "hard",
+        "type": "implement"
       },
       {
-        id: 36,
-        type: 'explain',
-        content: 'What is the purpose of useEffect in React?',
-        correctAnswer: 'To handle side effects in functional components',
-        points: 30,
-        timeLimit: 60,
-        category: 'HTML/CSS/Javascript',
-        difficulty: 'hard',
-        choices: [
-          'To handle side effects in functional components',
-          'To create state variables',
-          'To handle user input',
-          'To create custom hooks'
-        ]
+        "id": 83,
+        "content": "How do you select all `<div>` elements inside a `<section>` using CSS?",
+        "correctAnswer": "section div",
+        "choices": [
+          "section > div > *",
+          "div section",
+          "section div",
+          "div.section"
+        ],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 84,
+        "content": "What will `typeof NaN` return in JavaScript?",
+        "correctAnswer": "\"number\"",
+        "choices": [
+          "\"undefined\"",
+          "\"number\"",
+          "\"NaN\"",
+          "\"object\""
+        ],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 85,
+        "content": "How can you center a `<div>` horizontally using CSS Flexbox?",
+        "correctAnswer": "Use `display: flex; justify-content: center;` on the parent",
+        "choices": [
+          "Set margin: auto on the child",
+          "Use `text-align: center` on the child",
+          "Use `display: flex; justify-content: center;` on the parent",
+          "Use `float: center;`"
+        ],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 86,
+        "content": "Which HTML element is best for wrapping a group of related form fields?",
+        "correctAnswer": "<fieldset>",
+        "choices": [
+          "<div>",
+          "<form>",
+          "<fieldset>",
+          "<label>"
+        ],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 87,
+        "content": "What does `this` refer to in a regular JavaScript function?",
+        "correctAnswer": "The object that called the function",
+        "choices": [
+          "Always the global object",
+          "The object that called the function",
+          "The parent function",
+          "The DOM element"
+        ],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 88,
+        "content": "What is the default position value in CSS?",
+        "correctAnswer": "static",
+        "choices": [
+          "absolute",
+          "static",
+          "relative",
+          "fixed"
+        ],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 89,
+        "content": "What will `console.log([] + {})` print in JavaScript?",
+        "correctAnswer": "'[object Object]'",
+        "choices": [
+          "'{}[]'",
+          "'[object Object]'",
+          "NaN",
+          "undefined"
+        ],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 90,
+        "content": "Which CSS property controls the stacking order of elements?",
+        "correctAnswer": "z-index",
+        "choices": [
+          "z-layer",
+          "position",
+          "z-index",
+          "stack"
+        ],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "HTML/CSS/Javascript",
+        "difficulty": "hard",
+        "type": "implement"
       }
     ]
   }

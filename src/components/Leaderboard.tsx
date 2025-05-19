@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Container,
@@ -13,7 +13,7 @@ import {
   Box,
 } from '@mui/material';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import { Team } from '../types';
+import { Team } from '../types/index.ts';
 
 const Leaderboard = () => {
   const navigate = useNavigate();
