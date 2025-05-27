@@ -14,11 +14,14 @@ export interface Question {
 }
 
 export interface GameState {
-  currentQuestion: number;
-  timeRemaining: number;
+  category: Category;
+  currentDifficulty: Difficulty;
+  currentQuestionIndex: number;
+  score: number;
+  showAnswer: string | null;
+  timeLeft: number;
+  usedQuestions: number[];
   isBreak: boolean;
-  mainTimerPaused: boolean;
   mainTimeRemaining: number;
-  currentDifficulty: 'easy' | 'medium' | 'hard';
-  correctAnswers: number;
+  mainTimerPaused: boolean;
 } 

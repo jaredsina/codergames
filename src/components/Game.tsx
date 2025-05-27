@@ -1711,10 +1711,6 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
 
 const Game = () => {
   const navigate = useNavigate();
-  const [currentAnswer, setCurrentAnswer] = useState('');
-  const [totalPoints, setTotalPoints] = useState(0);
-  const [isRollingDifficulty, setIsRollingDifficulty] = useState(false);
-  const [isRollingCoach, setIsRollingCoach] = useState(false);
   const [diceResult, setDiceResult] = useState<number | null>(null);
   const [coachDiceResult, setCoachDiceResult] = useState<number | null>(null);
   const [showQuestion, setShowQuestion] = useState(false);
@@ -1722,25 +1718,28 @@ const Game = () => {
   const [hasCoachHelp, setHasCoachHelp] = useState(false);
   const [hasRolledDifficulty, setHasRolledDifficulty] = useState(false);
   const [hasRolledCoach, setHasRolledCoach] = useState(false);
-  const [usedQuestions, setUsedQuestions] = useState<Set<number>>(new Set());
-  const [lastQuestionId, setLastQuestionId] = useState<number | null>(null);
-  const [questionCount, setQuestionCount] = useState(0);
+  const [currentAnswer, setCurrentAnswer] = useState('');
+  const [isRollingDifficulty, setIsRollingDifficulty] = useState(false);
+  const [isRollingCoach, setIsRollingCoach] = useState(false);
+
   const [gameState, setGameState] = useState<GameState>({
-    currentQuestion: 0,
-    timeRemaining: 1800,
-    isBreak: false,
-    mainTimerPaused: false,
-    mainTimeRemaining: 1800,
+    category: localStorage.getItem('selectedCategory') as Category || 'Python',
     currentDifficulty: 'easy',
-    correctAnswers: 0
+    currentQuestionIndex: 0,
+    score: 0,
+    showAnswer: null,
+    timeLeft: 1800,
+    usedQuestions: [],
+    isBreak: false,
+    mainTimeRemaining: 1800,
+    mainTimerPaused: false
   });
 
-  const selectedCategory = localStorage.getItem('selectedCategory') as Category || 'Python';
-  const currentQuestions = questionsByCategory[selectedCategory][gameState.currentDifficulty];
+  const currentQuestions = questionsByCategory[gameState.category][gameState.currentDifficulty];
 
   const getRandomUnusedQuestion = () => {
     const availableQuestions = currentQuestions.filter((q, index) => 
-      !usedQuestions.has(index) && q.id !== lastQuestionId
+      !gameState.usedQuestions.includes(index)
     );
     
     if (availableQuestions.length === 0) {
@@ -1749,19 +1748,17 @@ const Game = () => {
         setGameState(prev => ({
           ...prev,
           currentDifficulty: 'medium',
-          currentQuestion: 0
+          currentQuestionIndex: 0,
+          usedQuestions: []
         }));
-        setUsedQuestions(new Set());
-        setLastQuestionId(null);
         return 0;
       } else if (gameState.currentDifficulty === 'medium') {
         setGameState(prev => ({
           ...prev,
           currentDifficulty: 'hard',
-          currentQuestion: 0
+          currentQuestionIndex: 0,
+          usedQuestions: []
         }));
-        setUsedQuestions(new Set());
-        setLastQuestionId(null);
         return 0;
       } else {
         // If we've used all questions in all difficulties, end the game
@@ -1769,19 +1766,21 @@ const Game = () => {
         if (storedTeams) {
           const teams = JSON.parse(storedTeams);
           if (teams.length > 0) {
-            teams[0].score = totalPoints;
+            teams[0].score = gameState.score;
             localStorage.setItem('teams', JSON.stringify(teams));
           }
         }
         navigate('/leaderboard');
-        return 0;
+        return -1;
       }
     }
     
     const randomIndex = Math.floor(Math.random() * availableQuestions.length);
     const questionIndex = currentQuestions.findIndex(q => q.id === availableQuestions[randomIndex].id);
-    setUsedQuestions(prev => new Set([...prev, questionIndex]));
-    setLastQuestionId(availableQuestions[randomIndex].id);
+    setGameState(prev => ({
+      ...prev,
+      usedQuestions: [...prev.usedQuestions, questionIndex]
+    }));
     return questionIndex;
   };
 
@@ -1839,13 +1838,12 @@ const Game = () => {
     if (selectedDifficulty) {
       const newQuestionIndex = getRandomUnusedQuestion();
       if (newQuestionIndex >= 0) {  // Only update if we got a valid question index
-        setGameState(prev => ({
+        setGameState((prev: GameState) => ({
           ...prev,
           currentDifficulty: selectedDifficulty,
-          currentQuestion: newQuestionIndex
+          currentQuestionIndex: newQuestionIndex
         }));
         setShowQuestion(true);
-        setQuestionCount(prev => prev + 1);
       }
     }
   };
@@ -1853,10 +1851,10 @@ const Game = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setGameState((prev) => {
-        if (prev.timeRemaining > 0) {
+        if (prev.timeLeft > 0) {
           return {
             ...prev,
-            timeRemaining: prev.timeRemaining - 1,
+            timeLeft: prev.timeLeft - 1,
           };
         } else {
           clearInterval(timer);
@@ -1864,7 +1862,7 @@ const Game = () => {
             return {
               ...prev,
               isBreak: false,
-              timeRemaining: prev.mainTimeRemaining,
+              timeLeft: prev.mainTimeRemaining,
               mainTimerPaused: false,
             };
           } else {
@@ -1872,7 +1870,7 @@ const Game = () => {
             if (storedTeams) {
               const teams = JSON.parse(storedTeams);
               if (teams.length > 0) {
-                teams[0].score = totalPoints;
+                teams[0].score = prev.score;
                 localStorage.setItem('teams', JSON.stringify(teams));
               }
             }
@@ -1884,7 +1882,7 @@ const Game = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [navigate, totalPoints]);
+  }, [navigate]);
 
   const formatTime = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
@@ -1899,14 +1897,13 @@ const Game = () => {
 
   const handleSubmitAnswer = () => {
     if (currentAnswer.trim()) {
-      const currentQuestion = currentQuestions[gameState.currentQuestion];
+      const currentQuestion = currentQuestions[gameState.currentQuestionIndex];
       const isCorrect = currentAnswer.trim() === currentQuestion.correctAnswer;
       
       if (isCorrect) {
-        setTotalPoints(prev => prev + currentQuestion.points);
         setGameState(prev => ({
           ...prev,
-          correctAnswers: prev.correctAnswers + 1
+          score: prev.score + currentQuestion.points
         }));
       }
       
@@ -1916,8 +1913,6 @@ const Game = () => {
       setShowQuestion(false);
       setSelectedDifficulty(null);
       setHasCoachHelp(false);
-      setIsRollingDifficulty(false);
-      setIsRollingCoach(false);
       setHasRolledDifficulty(false);
       setHasRolledCoach(false);
     }
@@ -1928,7 +1923,7 @@ const Game = () => {
     if (newQuestionIndex >= 0) {  // Only update if we got a valid question index
       setGameState(prev => ({
         ...prev,
-        currentQuestion: newQuestionIndex
+        currentQuestionIndex: newQuestionIndex
       }));
       setCurrentAnswer('');
       setDiceResult(null);
@@ -1936,8 +1931,6 @@ const Game = () => {
       setShowQuestion(false);
       setSelectedDifficulty(null);
       setHasCoachHelp(false);
-      setIsRollingDifficulty(false);
-      setIsRollingCoach(false);
       setHasRolledDifficulty(false);
       setHasRolledCoach(false);
     }
@@ -1947,9 +1940,9 @@ const Game = () => {
     setGameState(prev => ({
       ...prev,
       isBreak: true,
-      timeRemaining: 300, // 5 minutes for break
+      timeLeft: 300, // 5 minutes for break
       mainTimerPaused: true,
-      mainTimeRemaining: prev.timeRemaining,
+      mainTimeRemaining: prev.timeLeft,
     }));
   };
 
@@ -1957,7 +1950,7 @@ const Game = () => {
     setGameState(prev => ({
       ...prev,
       isBreak: false,
-      timeRemaining: prev.mainTimeRemaining,
+      timeLeft: prev.mainTimeRemaining,
       mainTimerPaused: false,
     }));
   };
@@ -2013,7 +2006,7 @@ const Game = () => {
               CoderGames
             </Typography>
             <Typography variant="h6" color="primary">
-              Points: {totalPoints}
+              Points: {gameState.score}
             </Typography>
           </Box>
 
@@ -2022,11 +2015,11 @@ const Game = () => {
               {getCurrentPhase()}
             </Typography>
             <Typography variant="h4" align="center" gutterBottom color="text.primary">
-              {formatTime(gameState.timeRemaining)}
+              {formatTime(gameState.timeLeft)}
             </Typography>
             <LinearProgress
               variant="determinate"
-              value={(gameState.timeRemaining / (gameState.isBreak ? 300 : 1800)) * 100}
+              value={(gameState.timeLeft / (gameState.isBreak ? 300 : 1800)) * 100}
               sx={{ 
                 height: 10, 
                 borderRadius: 5,
@@ -2284,7 +2277,7 @@ const Game = () => {
           ) : (
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               <Typography variant="h5" gutterBottom>
-                Questions Answered: {questionCount}
+                Questions Answered: {gameState.usedQuestions.length}
               </Typography>
               <Typography variant="h6" gutterBottom>
                 Difficulty: {gameState.currentDifficulty.toUpperCase()}
@@ -2295,7 +2288,7 @@ const Game = () => {
                 </Typography>
               )}
               <Typography variant="h6" gutterBottom>
-                {currentQuestions[gameState.currentQuestion].content.split('\n').map((line, i) => {
+                {currentQuestions[gameState.currentQuestionIndex].content.split('\n').map((line, i) => {
                   // Check if the line is part of a code block (indented)
                   const isCodeLine = line.startsWith('    ') || line.startsWith('\t');
                   return (
@@ -2315,7 +2308,7 @@ const Game = () => {
                 })}
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                {currentQuestions[gameState.currentQuestion].choices.map((choice, index) => (
+                {currentQuestions[gameState.currentQuestionIndex].choices.map((choice, index) => (
                   <Button
                     key={index}
                     variant={currentAnswer === choice ? 'contained' : 'outlined'}
