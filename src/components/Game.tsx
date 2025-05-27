@@ -189,830 +189,232 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "timeLimit": 30,
         "category": "Python",
         "difficulty": "easy"
-      },
-      {
-        "id": 101,
-        "content": "Which HTML tag is used to display an image?",
-        "correctAnswer": "<img>",
-        "choices": ["<image>", "<img>", "<src>", "<pic>"],
-        "points": 5,
-        "timeLimit": 30,
-        "category": "HTML/CSS/Javascript",
-        "difficulty": "easy",
-        "type": "implement"
-      },
-      {
-        "id": 102,
-        "content": "What is the correct CSS syntax to make all paragraphs have red text?",
-        "correctAnswer": "p { color: red; }",
-        "choices": ["p { color: red; }", "p = red;", "paragraph { color: red; }", "p.text = red;"],
-        "points": 5,
-        "timeLimit": 30,
-        "category": "HTML/CSS/Javascript",
-        "difficulty": "easy",
-        "type": "implement"
-      },
-      {
-        "id": 103,
-        "content": "Which JavaScript keyword is used to define a constant variable?",
-        "correctAnswer": "const",
-        "choices": ["let", "var", "const", "define"],
-        "points": 5,
-        "timeLimit": 30,
-        "category": "HTML/CSS/Javascript",
-        "difficulty": "easy",
-        "type": "implement"
-      },
-      {
-        "id": 201,
-        "content": "Which HTML tag is used for the largest heading?",
-        "correctAnswer": "<h1>",
-        "choices": ["<h1>", "<heading>", "<head>", "<h6>"],
-        "points": 5,
-        "timeLimit": 30,
-        "category": "HTML/CSS/Javascript",
-        "difficulty": "easy",
-        "type": "implement"
-      },
-      {
-        "id": 202,
-        "content": "What is the correct HTML element for inserting a line break?",
-        "correctAnswer": "<br>",
-        "choices": ["<break>", "<br>", "<lb>", "<newline>"],
-        "points": 5,
-        "timeLimit": 30,
-        "category": "HTML/CSS/Javascript",
-        "difficulty": "easy",
-        "type": "implement"
-      },
-      {
-        "id": 203,
-        "content": "Which CSS property is used to change the text color of an element?",
-        "correctAnswer": "color",
-        "choices": ["color", "text-color", "font-color", "background-color"],
-        "points": 5,
-        "timeLimit": 30,
-        "category": "HTML/CSS/Javascript",
-        "difficulty": "easy",
-        "type": "implement"
-      },
-      {
-        "id": 204,
-        "content": "How do you write 'Hello World' in an alert box in JavaScript?",
-        "correctAnswer": "alert('Hello World');",
-        "choices": ["alert('Hello World');", "msg('Hello World');", "alertBox('Hello World');", "msgBox('Hello World');"],
-        "points": 5,
-        "timeLimit": 30,
-        "category": "HTML/CSS/Javascript",
-        "difficulty": "easy",
-        "type": "implement"
-      },
-      {
-        "id": 205,
-        "content": "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
-        "correctAnswer": "alt",
-        "choices": ["alt", "title", "src", "longdesc"],
-        "points": 5,
-        "timeLimit": 30,
-        "category": "HTML/CSS/Javascript",
-        "difficulty": "easy",
-        "type": "implement"
       }
     ],
     'medium': [
-  {
-    "id": 11,
-    "type": "implement",
-    "content": "What is the output of this code?\n\nx = [1, 2, 3]\nprint(x[-1])\n",
-    "correctAnswer": "3",
-    "choices": ["3", "1", "2", "IndexError"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Python",
-    "difficulty": "medium"
-  },
-  {
-    "id": 12,
-    "type": "implement",
-    "content": "What does this code print?\n\nfor i in range(1, 4):\n    print(i * '*')",
-    "correctAnswer": "*\n**\n***",
-    "choices": ["*\n**\n***", "*\n*\n*", "***", "SyntaxError"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Python",
-    "difficulty": "medium"
-  },
-  {
-    "id": 13,
-    "type": "implement",
-    "content": "What is the correct way to open a file for reading in Python?",
-    "correctAnswer": "open('file.txt', 'r')",
-    "choices": ["open('file.txt')", "open('file.txt', 'w')", "open('file.txt', 'r')", "file.open('file.txt')"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Python",
-    "difficulty": "medium"
-  },
-  {
-    "id": 14,
-    "type": "implement",
-    "content": "Which built-in function returns the length of a list?",
-    "correctAnswer": "len()",
-    "choices": ["count()", "length()", "len()", "size()"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Python",
-    "difficulty": "medium"
-  },
-  {
-    "id": 15,
-    "type": "implement",
-    "content": "What is the output of:\n\nx = [1, 2, 3]\nx.append([4, 5])\nprint(x)\n",
-    "correctAnswer": "[1, 2, 3, [4, 5]]",
-    "choices": ["[1, 2, 3, 4, 5]", "[1, 2, 3, [4, 5]]", "[1, 2, 3, 4]", "[1, 2, 3]"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Python",
-    "difficulty": "medium"
-  },
-  {
-    "id": 16,
-    "type": "implement",
-    "content": "What is the result of `bool('False')`?",
-    "correctAnswer": "True",
-    "choices": ["False", "Error", "None", "True"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Python",
-    "difficulty": "medium"
-  },
-  {
-    "id": 17,
-    "type": "implement",
-    "content": "How do you define a class named `Dog` in Python?",
-    "correctAnswer": "class Dog:",
-    "choices": ["class Dog:", "define class Dog", "Dog() class", "def Dog():"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Python",
-    "difficulty": "medium"
-  },
-  {
-    "id": 18,
-    "type": "implement",
-    "content": "Which of the following creates a dictionary in Python?",
-    "correctAnswer": "{'a': 1, 'b': 2}",
-    "choices": ["['a', 'b']", "{'a': 1, 'b': 2}", "('a', 1, 'b', 2)", "{1, 2, 3}"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Python",
-    "difficulty": "medium"
-  },
-  {
-    "id": 19,
-    "type": "implement",
-    "content": "Which statement correctly checks if key `'name'` exists in a dictionary `d`?",
-    "correctAnswer": "'name' in d",
-    "choices": ["d.has('name')", "'name' in d", "d['name']", "exists(d, 'name')"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Python",
-    "difficulty": "medium"
-  },
-  {
-    "id": 20,
-    "type": "implement",
-    "content": "What does this function return?\n\ndef mystery(a):\n    return a[::-1]\n\nWhat will `mystery('abc')` return?",
-    "correctAnswer": "'cba'",
-    "choices": ["['c', 'b', 'a']", "'abc'", "'cba'", "None"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Python",
-    "difficulty": "medium"
-  },{
-    "id": 131,
-    "category": "Python",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "What will be the output?\n\nfor i in range(1, 3):\n    print(i * 2)",
-    "timeLimit":30,
-    "choices": [
-      "0",
-      "6",
-      "3",
-      "2\n4"
+      {
+        "id": 11,
+        "type": "implement",
+        "content": "What is the output of this code?\n\nx = [1, 2, 3]\nprint(x[-1])\n",
+        "correctAnswer": "3",
+        "choices": ["3", "1", "2", "IndexError"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Python",
+        "difficulty": "medium"
+      },
+      {
+        "id": 12,
+        "type": "implement",
+        "content": "What does this code print?\n\nfor i in range(1, 4):\n    print(i * '*')",
+        "correctAnswer": "*\n**\n***",
+        "choices": ["*\n**\n***", "*\n*\n*", "***", "SyntaxError"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Python",
+        "difficulty": "medium"
+      },
+      {
+        "id": 13,
+        "type": "implement",
+        "content": "What is the correct way to open a file for reading in Python?",
+        "correctAnswer": "open('file.txt', 'r')",
+        "choices": ["open('file.txt')", "open('file.txt', 'w')", "open('file.txt', 'r')", "file.open('file.txt')"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Python",
+        "difficulty": "medium"
+      },
+      {
+        "id": 14,
+        "type": "implement",
+        "content": "Which built-in function returns the length of a list?",
+        "correctAnswer": "len()",
+        "choices": ["count()", "length()", "len()", "size()"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Python",
+        "difficulty": "medium"
+      },
+      {
+        "id": 15,
+        "type": "implement",
+        "content": "What is the output of:\n\nx = [1, 2, 3]\nx.append([4, 5])\nprint(x)\n",
+        "correctAnswer": "[1, 2, 3, [4, 5]]",
+        "choices": ["[1, 2, 3, 4, 5]", "[1, 2, 3, [4, 5]]", "[1, 2, 3, 4]", "[1, 2, 3]"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Python",
+        "difficulty": "medium"
+      },
+      {
+        "id": 16,
+        "type": "implement",
+        "content": "What is the result of `bool('False')`?",
+        "correctAnswer": "True",
+        "choices": ["False", "Error", "None", "True"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Python",
+        "difficulty": "medium"
+      },
+      {
+        "id": 17,
+        "type": "implement",
+        "content": "How do you define a class named `Dog` in Python?",
+        "correctAnswer": "class Dog:",
+        "choices": ["class Dog:", "define class Dog", "Dog() class", "def Dog():"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Python",
+        "difficulty": "medium"
+      },
+      {
+        "id": 18,
+        "type": "implement",
+        "content": "Which of the following creates a dictionary in Python?",
+        "correctAnswer": "{'a': 1, 'b': 2}",
+        "choices": ["['a', 'b']", "{'a': 1, 'b': 2}", "('a', 1, 'b', 2)", "{1, 2, 3}"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Python",
+        "difficulty": "medium"
+      },
+      {
+        "id": 19,
+        "type": "implement",
+        "content": "Which statement correctly checks if key `'name'` exists in a dictionary `d`?",
+        "correctAnswer": "'name' in d",
+        "choices": ["d.has('name')", "'name' in d", "d['name']", "exists(d, 'name')"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Python",
+        "difficulty": "medium"
+      },
+      {
+        "id": 20,
+        "type": "implement",
+        "content": "What does this function return?\n\ndef mystery(a):\n    return a[::-1]\n\nWhat will `mystery('abc')` return?",
+        "correctAnswer": "'cba'",
+        "choices": ["['c', 'b', 'a']", "'abc'", "'cba'", "None"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Python",
+        "difficulty": "medium"
+      }
     ],
-    "correctAnswer": "2\n4"
-  },
-  {
-    "id": 132,
-    "category": "Python",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "What will be the output?\n\nfor i in range(2, 4):\n    print(i * 2)",
-    "timeLimit":30,
-    "choices": [
-      "8",
-      "2",
-      "5",
-      "4\n6"
-    ],
-    "correctAnswer": "4\n6"
-  },
-  {
-    "id": 133,
-    "category": "Python",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "What will be the output?\n\nfor i in range(3, 5):\n    print(i * 2)",
-    "timeLimit":30,
-    "choices": [
-      "4",
-      "10",
-      "7",
-      "6\n8"
-    ],
-    "correctAnswer": "6\n8"
-  },
-  {
-    "id": 134,
-    "category": "Python",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "What will be the output?\n\nfor i in range(4, 6):\n    print(i * 2)",
-    "timeLimit":30,
-    "choices": [
-      "9",
-      "6",
-      "8\n10",
-      "12"
-    ],
-    "correctAnswer": "8\n10"
-  },
-  {
-    "id": 135,
-    "category": "Python",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "What will be the output?\n\nfor i in range(5, 7):\n    print(i * 2)",
-    "timeLimit":30,
-    "choices": [
-      "11",
-      "10\n12",
-      "14",
-      "8"
-    ],
-    "correctAnswer": "10\n12"
-  },
-  {
-    "id": 136,
-    "category": "Python",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "What will be the output?\n\nfor i in range(6, 8):\n    print(i * 2)",
-    "timeLimit":30,
-    "choices": [
-      "13",
-      "12\n14",
-      "10",
-      "16"
-    ],
-    "correctAnswer": "12\n14"
-  },
-  {
-    "id": 137,
-    "category": "Python",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "What will be the output?\n\nfor i in range(7, 9):\n    print(i * 2)",
-    "timeLimit":30,
-    "choices": [
-      "18",
-      "12",
-      "15",
-      "14\n16"
-    ],
-    "correctAnswer": "14\n16"
-  },
-  {
-    "id": 138,
-    "category": "Python",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "What will be the output?\n\nfor i in range(8, 10):\n    print(i * 2)",
-    "timeLimit":30,
-    "choices": [
-      "14",
-      "17",
-      "20",
-      "16\n18"
-    ],
-    "correctAnswer": "16\n18"
-  },
-  {
-    "id": 139,
-    "category": "Python",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "What will be the output?\n\nfor i in range(9, 11):\n    print(i * 2)",
-    "timeLimit":30,
-    "choices": [
-      "16",
-      "22",
-      "18\n20",
-      "19"
-    ],
-    "correctAnswer": "18\n20"
-  },
-  {
-    "id": 140,
-    "category": "Python",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "What will be the output?\n\nfor i in range(10, 12):\n    print(i * 2)",
-    "timeLimit":30,
-    "choices": [
-      "24",
-      "18",
-      "20\n22",
-      "21"
-    ],
-    "correctAnswer": "20\n22"
-  },
-  {
-    "id": 104,
-    "content": "Which CSS property is used to change the font of an element?",
-    "correctAnswer": "font-family",
-    "choices": ["font-family", "font-type", "font-style", "font-weight"],
-    "points": 5,
-    "timeLimit": 45,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 105,
-    "content": "What is the output of: console.log(typeof null);?",
-    "correctAnswer": "object",
-    "choices": ["object", "null", "undefined", "string"],
-    "points": 5,
-    "timeLimit": 45,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 106,
-    "content": "Which HTML tag is used to create an unordered list?",
-    "correctAnswer": "<ul>",
-    "choices": ["<ol>", "<ul>", "<li>", "<list>"],
-    "points": 5,
-    "timeLimit": 45,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 206,
-    "content": "Which JavaScript method is used to select an element by its ID?",
-    "correctAnswer": "document.getElementById()",
-    "choices": ["document.getElementById()", "document.querySelector()", "document.getElement()", "document.selectById()"],
-    "points": 5,
-    "timeLimit": 45,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 207,
-    "content": "Which CSS property is used to change the spacing between letters?",
-    "correctAnswer": "letter-spacing",
-    "choices": ["letter-spacing", "word-spacing", "spacing", "font-spacing"],
-    "points": 5,
-    "timeLimit": 45,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 208,
-    "content": "How do you add a comment in CSS?",
-    "correctAnswer": "/* comment */",
-    "choices": ["// comment", "<!-- comment -->", "/* comment */", "# comment"],
-    "points": 5,
-    "timeLimit": 45,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 209,
-    "content": "Which HTML tag is used to define a table row?",
-    "correctAnswer": "<tr>",
-    "choices": ["<td>", "<tr>", "<th>", "<row>"],
-    "points": 5,
-    "timeLimit": 45,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 210,
-    "content": "What is the correct JavaScript syntax to change the content of the HTML element below?\n\n<p id=\"demo\">This is a demonstration.</p>",
-    "correctAnswer": "document.getElementById('demo').innerHTML = 'Hello World!';",
-    "choices": [
-      "document.getElementById('demo').innerHTML = 'Hello World!';",
-      "#demo.innerHTML = 'Hello World!';",
-      "document.getElement('demo').innerHTML = 'Hello World!';",
-      "document.querySelector('demo').innerHTML = 'Hello World!';"
-    ],
-    "points": 5,
-    "timeLimit": 45,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "medium",
-    "type": "implement"
-  }
-],
     'hard': [
-  {
-    "id": 21,
-    "type": "implement",
-    "content": "What is the output?\n\ndef func(a, b=[]):\n    b.append(a)\n    return b\n\nprint(func(1))\nprint(func(2))",
-    "correctAnswer": "[1]\n[1, 2]",
-    "choices": ["[1]\n[1, 2]", "[1]\n[2]", "[1, 2]\n[1, 2]", "[1]\n[1]"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Python",
-    "difficulty": "hard"
-  },
-  {
-    "id": 22,
-    "type": "implement",
-    "content": "What is the output of this code?\n\nx = [1, 2, 3]\ny = x\nx[0] = 99\nprint(y)\n",
-    "correctAnswer": "[99, 2, 3]",
-    "choices": ["[99, 2, 3]", "[1, 2, 3]", "[0, 2, 3]", "Error"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Python",
-    "difficulty": "hard"
-  },
-  {
-    "id": 23,
-    "type": "implement",
-    "content": "Which of these will raise a `TypeError`?",
-    "correctAnswer": "`{[1]: 'one'}`",
-    "choices": ["`{(1,): 'one'}`", "`{1: 'one'}`", "`{[1]: 'one'}`", "`{'1': 'one'}`"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Python",
-    "difficulty": "hard"
-  },
-  {
-    "id": 24,
-    "type": "implement",
-    "content": "What is the output?\n\nx = (i*i for i in range(3))\nprint(list(x))\nprint(list(x))\n",
-    "correctAnswer": "[0, 1, 4]\n[]",
-    "choices": ["[0, 1, 4]\n[]", "[0, 1, 4]\n[0, 1, 4]", "[0, 1, 4]\nNone", "Error"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Python",
-    "difficulty": "hard"
-  },
-  {
-    "id": 25,
-    "type": "implement",
-    "content": "What does this code return?\n\nprint(''.join(sorted('cab')))\n",
-    "correctAnswer": "abc",
-    "choices": ["abc", "cab", "bac", "None"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Python",
-    "difficulty": "hard"
-  },
-  {
-    "id": 26,
-    "type": "implement",
-    "content": "What is the output?\n\ndef foo(x, y):\n    return x if x > y else y\nprint(foo(3, 5))",
-    "correctAnswer": "5",
-    "choices": ["3", "5", "True", "None"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Python",
-    "difficulty": "hard"
-  },
-  {
-    "id": 27,
-    "type": "implement",
-    "content": "Which method is used to get all keys in a dictionary?",
-    "correctAnswer": "keys()",
-    "choices": ["keys()", "getKeys()", "all()", "dict()"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Python",
-    "difficulty": "hard"
-  },
-  {
-    "id": 28,
-    "type": "implement",
-    "content": "What is the result of:\n\nprint(0.1 + 0.2 == 0.3)\n",
-    "correctAnswer": "False",
-    "choices": ["False", "True", "0.3", "Error"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Python",
-    "difficulty": "hard"
-  },
-  {
-    "id": 29,
-    "type": "implement",
-    "content": "What will be printed?\n\nx = [1, 2, 3]\nprint(x.pop(1))\nprint(x)\n",
-    "correctAnswer": "2\n[1, 3]",
-    "choices": ["2\n[1, 3]", "1\n[2, 3]", "3\n[1, 2]", "[1, 2]"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Python",
-    "difficulty": "hard"
-  },
-  {
-    "id": 30,
-    "type": "implement",
-    "content": "What is the output?\n\ndef add_items(a, b=[]):\n    b.append(a)\n    return b\n\nprint(add_items(1))\nprint(add_items(2))",
-    "correctAnswer": "[1]\n[1, 2]",
-    "choices": ["[1]\n[1, 2]", "[1, 2]\n[2]", "[2]\n[2]", "[1]\n[2]"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Python",
-    "difficulty": "hard"
-  },{
-    "id": 141,
-    "category": "Python",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What does the following function return?\n\ndef mystery(n):\n    return n ^ (n >> 1)\n\nprint(mystery(1))",
-    "timeLimit":30,
-    "choices": [
-      "2",
-      "2",
-      "0",
-      "1"
-    ],
-    "correctAnswer": "1"
-  },
-  {
-    "id": 142,
-    "category": "Python",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What does the following function return?\n\ndef mystery(n):\n    return n ^ (n >> 1)\n\nprint(mystery(2))",
-    "timeLimit":30,
-    "choices": [
-      "3",
-      "3",
-      "4",
-      "1"
-    ],
-    "correctAnswer": "3"
-  },
-  {
-    "id": 143,
-    "category": "Python",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What does the following function return?\n\ndef mystery(n):\n    return n ^ (n >> 1)\n\nprint(mystery(3))",
-    "timeLimit":30,
-    "choices": [
-      "2",
-      "6",
-      "2",
-      "4"
-    ],
-    "correctAnswer": "2"
-  },
-  {
-    "id": 144,
-    "category": "Python",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What does the following function return?\n\ndef mystery(n):\n    return n ^ (n >> 1)\n\nprint(mystery(4))",
-    "timeLimit":30,
-    "choices": [
-      "8",
-      "3",
-      "5",
-      "6"
-    ],
-    "correctAnswer": "6"
-  },
-  {
-    "id": 145,
-    "category": "Python",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What does the following function return?\n\ndef mystery(n):\n    return n ^ (n >> 1)\n\nprint(mystery(5))",
-    "timeLimit":30,
-    "choices": [
-      "6",
-      "7",
-      "10",
-      "4"
-    ],
-    "correctAnswer": "7"
-  },
-  {
-    "id": 146,
-    "category": "Python",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What does the following function return?\n\ndef mystery(n):\n    return n ^ (n >> 1)\n\nprint(mystery(6))",
-    "timeLimit":30,
-    "choices": [
-      "7",
-      "5",
-      "12",
-      "5"
-    ],
-    "correctAnswer": "5"
-  },
-  {
-    "id": 147,
-    "category": "Python",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What does the following function return?\n\ndef mystery(n):\n    return n ^ (n >> 1)\n\nprint(mystery(7))",
-    "timeLimit":30,
-    "choices": [
-      "8",
-      "14",
-      "6",
-      "4"
-    ],
-    "correctAnswer": "4"
-  },
-  {
-    "id": 148,
-    "category": "Python",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What does the following function return?\n\ndef mystery(n):\n    return n ^ (n >> 1)\n\nprint(mystery(8))",
-    "timeLimit":30,
-    "choices": [
-      "7",
-      "12",
-      "9",
-      "16"
-    ],
-    "correctAnswer": "12"
-  },
-  {
-    "id": 149,
-    "category": "Python",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What does the following function return?\n\ndef mystery(n):\n    return n ^ (n >> 1)\n\nprint(mystery(9))",
-    "timeLimit":30,
-    "choices": [
-      "8",
-      "18",
-      "13",
-      "10"
-    ],
-    "correctAnswer": "13"
-  },
-  {
-    "id": 150,
-    "category": "Python",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What does the following function return?\n\ndef mystery(n):\n    return n ^ (n >> 1)\n\nprint(mystery(10))",
-    "timeLimit":30,
-    "choices": [
-      "15",
-      "11",
-      "20",
-      "9"
-    ],
-    "correctAnswer": "15"
-  },
-  {
-    "id": 107,
-    "content": "What will this code output?\n\nconsole.log([1,2,3] + [4,5,6]);",
-    "correctAnswer": "1,2,34,5,6",
-    "choices": ["[1,2,3,4,5,6]", "1,2,34,5,6", "[1,2,3]+[4,5,6]", "Error"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 108,
-    "content": "Which CSS property allows you to create rounded corners?",
-    "correctAnswer": "border-radius",
-    "choices": ["border-radius", "corner-radius", "round-corner", "radius"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 109,
-    "content": "What does the 'defer' attribute do in a <script> tag?",
-    "correctAnswer": "It delays script execution until after the HTML is parsed.",
-    "choices": ["It runs the script immediately.", "It delays script execution until after the HTML is parsed.", "It loads the script asynchronously.", "It disables the script."],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 110,
-    "content": "What is the result of: [1,2,3].map(x => x * 2).filter(x => x > 3)?",
-    "correctAnswer": "[4, 6]",
-    "choices": ["[2, 4, 6]", "[4, 6]", "[6]", "[2, 6]"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 211,
-    "content": "What is the output of the following code?\n\nconsole.log(typeof NaN);",
-    "correctAnswer": "number",
-    "choices": ["number", "NaN", "undefined", "object"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 212,
-    "content": "Which HTML5 element is used to specify a footer for a document or section?",
-    "correctAnswer": "<footer>",
-    "choices": ["<footer>", "<bottom>", "<section-footer>", "<foot>"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 213,
-    "content": "Which CSS property is used to create a shadow effect for text?",
-    "correctAnswer": "text-shadow",
-    "choices": ["box-shadow", "text-shadow", "shadow", "font-shadow"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 214,
-    "content": "What is the result of the following code?\n\nconsole.log(0 == false);",
-    "correctAnswer": "true",
-    "choices": ["true", "false", "TypeError", "undefined"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 215,
-    "content": "Which JavaScript method can be used to convert a JSON string into a JavaScript object?",
-    "correctAnswer": "JSON.parse()",
-    "choices": ["JSON.parse()", "JSON.stringify()", "parseJSON()", "toObject()"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "HTML/CSS/Javascript",
-    "difficulty": "hard",
-    "type": "implement"
-  }
-]
+      {
+        "id": 21,
+        "type": "implement",
+        "content": "What is the output?\n\ndef func(a, b=[]):\n    b.append(a)\n    return b\n\nprint(func(1))\nprint(func(2))",
+        "correctAnswer": "[1]\n[1, 2]",
+        "choices": ["[1]\n[1, 2]", "[1]\n[2]", "[1, 2]\n[1, 2]", "[1]\n[1]"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Python",
+        "difficulty": "hard"
+      },
+      {
+        "id": 22,
+        "type": "implement",
+        "content": "What is the output of this code?\n\nx = [1, 2, 3]\ny = x\nx[0] = 99\nprint(y)\n",
+        "correctAnswer": "[99, 2, 3]",
+        "choices": ["[99, 2, 3]", "[1, 2, 3]", "[0, 2, 3]", "Error"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Python",
+        "difficulty": "hard"
+      },
+      {
+        "id": 23,
+        "type": "implement",
+        "content": "Which of these will raise a `TypeError`?",
+        "correctAnswer": "`{[1]: 'one'}`",
+        "choices": ["`{(1,): 'one'}`", "`{1: 'one'}`", "`{[1]: 'one'}`", "`{'1': 'one'}`"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Python",
+        "difficulty": "hard"
+      },
+      {
+        "id": 24,
+        "type": "implement",
+        "content": "What is the output?\n\nx = (i*i for i in range(3))\nprint(list(x))\nprint(list(x))\n",
+        "correctAnswer": "[0, 1, 4]\n[]",
+        "choices": ["[0, 1, 4]\n[]", "[0, 1, 4]\n[0, 1, 4]", "[0, 1, 4]\nNone", "Error"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Python",
+        "difficulty": "hard"
+      },
+      {
+        "id": 25,
+        "type": "implement",
+        "content": "What does this code return?\n\nprint(''.join(sorted('cab')))\n",
+        "correctAnswer": "abc",
+        "choices": ["abc", "cab", "bac", "None"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Python",
+        "difficulty": "hard"
+      },
+      {
+        "id": 26,
+        "type": "implement",
+        "content": "What is the output?\n\ndef foo(x, y):\n    return x if x > y else y\nprint(foo(3, 5))",
+        "correctAnswer": "5",
+        "choices": ["3", "5", "True", "None"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Python",
+        "difficulty": "hard"
+      },
+      {
+        "id": 27,
+        "type": "implement",
+        "content": "Which method is used to get all keys in a dictionary?",
+        "correctAnswer": "keys()",
+        "choices": ["keys()", "getKeys()", "all()", "dict()"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Python",
+        "difficulty": "hard"
+      },
+      {
+        "id": 28,
+        "type": "implement",
+        "content": "What is the result of:\n\nprint(0.1 + 0.2 == 0.3)\n",
+        "correctAnswer": "False",
+        "choices": ["False", "True", "0.3", "Error"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Python",
+        "difficulty": "hard"
+      },
+      {
+        "id": 29,
+        "type": "implement",
+        "content": "What will be printed?\n\nx = [1, 2, 3]\nprint(x.pop(1))\nprint(x)\n",
+        "correctAnswer": "2\n[1, 3]",
+        "choices": ["2\n[1, 3]", "1\n[2, 3]", "3\n[1, 2]", "[1, 2]"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Python",
+        "difficulty": "hard"
+      },
+      {
+        "id": 30,
+        "type": "implement",
+        "content": "What is the output?\n\ndef add_items(a, b=[]):\n    b.append(a)\n    return b\n\nprint(add_items(1))\nprint(add_items(2))",
+        "correctAnswer": "[1]\n[1, 2]",
+        "choices": ["[1]\n[1, 2]", "[1, 2]\n[2]", "[2]\n[2]", "[1]\n[2]"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Python",
+        "difficulty": "hard"
+      }
+    ]
   },
   'Scratch': {
     'easy': [
@@ -2436,13 +1838,15 @@ const Game = () => {
   const handleContinue = () => {
     if (selectedDifficulty) {
       const newQuestionIndex = getRandomUnusedQuestion();
-      setGameState(prev => ({
-        ...prev,
-        currentDifficulty: selectedDifficulty,
-        currentQuestion: newQuestionIndex
-      }));
-      setShowQuestion(true);
-      setQuestionCount(prev => prev + 1);
+      if (newQuestionIndex >= 0) {  // Only update if we got a valid question index
+        setGameState(prev => ({
+          ...prev,
+          currentDifficulty: selectedDifficulty,
+          currentQuestion: newQuestionIndex
+        }));
+        setShowQuestion(true);
+        setQuestionCount(prev => prev + 1);
+      }
     }
   };
 
@@ -2521,20 +1925,22 @@ const Game = () => {
 
   const handleNextQuestion = () => {
     const newQuestionIndex = getRandomUnusedQuestion();
-    setGameState(prev => ({
-      ...prev,
-      currentQuestion: newQuestionIndex
-    }));
-    setCurrentAnswer('');
-    setDiceResult(null);
-    setCoachDiceResult(null);
-    setShowQuestion(false);
-    setSelectedDifficulty(null);
-    setHasCoachHelp(false);
-    setIsRollingDifficulty(false);
-    setIsRollingCoach(false);
-    setHasRolledDifficulty(false);
-    setHasRolledCoach(false);
+    if (newQuestionIndex >= 0) {  // Only update if we got a valid question index
+      setGameState(prev => ({
+        ...prev,
+        currentQuestion: newQuestionIndex
+      }));
+      setCurrentAnswer('');
+      setDiceResult(null);
+      setCoachDiceResult(null);
+      setShowQuestion(false);
+      setSelectedDifficulty(null);
+      setHasCoachHelp(false);
+      setIsRollingDifficulty(false);
+      setIsRollingCoach(false);
+      setHasRolledDifficulty(false);
+      setHasRolledCoach(false);
+    }
   };
 
   const handleStartBreak = () => {
