@@ -9,23 +9,11 @@ import {
   LinearProgress,
   CircularProgress,
 } from '@mui/material';
-import { GameState } from '../types';
+import { GameState, Question } from '../types';
 import React from 'react';
 
 type Category = 'Python' | 'Scratch' | 'HTML/CSS/Javascript';
 type Difficulty = 'easy' | 'medium' | 'hard';
-
-interface Question {
-  id: number;
-  type: 'implement' | 'fix' | 'explain';
-  content: string;
-  correctAnswer: string;
-  points: number;
-  timeLimit: number;
-  category: Category;
-  difficulty: Difficulty;
-  choices: string[];
-}
 
 const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   'Python': {
@@ -1417,7 +1405,7 @@ const Game = () => {
     mainTimerPaused: false
   });
 
-  const currentQuestions = questionsByCategory[gameState.category][gameState.currentDifficulty];
+  const currentQuestions = questionsByCategory[gameState.category]?.[gameState.currentDifficulty] || [];
 
   const getRandomUnusedQuestion = () => {
     // First check if we have questions for the current category and difficulty
@@ -1454,7 +1442,7 @@ const Game = () => {
       }
     }
 
-    const availableQuestions = currentQuestions.filter((q, index) => 
+    const availableQuestions = currentQuestions.filter((_, index) => 
       !gameState.usedQuestions.includes(index)
     );
     
