@@ -530,547 +530,229 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   }
     ],
     'medium': [
-  {
-    "id": 41,
-    "content": "Which block would you use to continuously check if the sprite is touching the edge?",
-    "correctAnswer": "forever",
-    "choices": ["repeat", "if then", "forever", "wait until"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 42,
-    "content": "What block combination would you use to make a sprite bounce when hitting the edge?",
-    "correctAnswer": "if on edge, bounce",
-    "choices": ["go to x: y:", "if then", "if on edge, bounce", "touching edge?"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 43,
-    "content": "Which blocks would you combine to make a sprite move randomly on the screen?",
-    "correctAnswer": "go to x: (pick random -240 to 240) y: (pick random -180 to 180)",
-    "choices": ["glide to random position", "change x by 10", "go to x: (pick random -240 to 240) y: (pick random -180 to 180)", "move 10 steps"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 44,
-    "content": "Which block do you use to check both conditions at once?",
-    "correctAnswer": "and",
-    "choices": ["or", "=", "not", "and"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 45,
-    "content": "What block do you use to store a value that can be changed later?",
-    "correctAnswer": "make a variable",
-    "choices": ["set size to", "make a variable", "if then", "when I receive"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 46,
-    "content": "Which block can detect whether a key is being pressed?",
-    "correctAnswer": "key (space) pressed?",
-    "choices": ["when key pressed", "mouse down?", "key (space) pressed?", "touching color?"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 47,
-    "content": "What does the 'broadcast' block do in Scratch?",
-    "correctAnswer": "Sends a message to start other scripts",
-    "choices": ["Saves the game", "Sends a message to start other scripts", "Changes the costume", "Moves the sprite to another layer"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 48,
-    "content": "Which control block would you use to repeat actions until a condition is true?",
-    "correctAnswer": "repeat until",
-    "choices": ["forever", "repeat until", "if then", "wait until"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 49,
-    "content": "Which sensing block lets the sprite detect another sprite?",
-    "correctAnswer": "touching (sprite)?",
-    "choices": ["distance to (sprite)", "touching (sprite)?", "ask and wait", "mouse x"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "type": "implement"
-  },
-  {
-    "id": 50,
-    "content": "Which block would you use to change the value of a variable?",
-    "correctAnswer": "change [variable] by 1",
-    "choices": ["set size to 100%", "change [variable] by 1", "show variable", "repeat"],
-    "points": 10,
-    "timeLimit": 45,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "type": "implement"
-  },{
-    "id": 161,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "Which control block runs code multiple times?",
-    "timeLimit":30,
-    "choices": [
-      "if then",
-      "wait 1 sec",
-      "broadcast message1",
-      "repeat 10"
+      {
+        "id": 41,
+        "content": "Which block would you use to continuously check if the sprite is touching the edge?",
+        "correctAnswer": "forever",
+        "choices": ["repeat", "if then", "forever", "wait until"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Scratch",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 42,
+        "content": "What block combination would you use to make a sprite bounce when hitting the edge?",
+        "correctAnswer": "if on edge, bounce",
+        "choices": ["go to x: y:", "if then", "if on edge, bounce", "touching edge?"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Scratch",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 43,
+        "content": "Which blocks would you combine to make a sprite move randomly on the screen?",
+        "correctAnswer": "go to x: (pick random -240 to 240) y: (pick random -180 to 180)",
+        "choices": ["glide to random position", "change x by 10", "go to x: (pick random -240 to 240) y: (pick random -180 to 180)", "move 10 steps"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Scratch",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 44,
+        "content": "Which block do you use to check both conditions at once?",
+        "correctAnswer": "and",
+        "choices": ["or", "=", "not", "and"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Scratch",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 45,
+        "content": "What block do you use to store a value that can be changed later?",
+        "correctAnswer": "make a variable",
+        "choices": ["set size to", "make a variable", "if then", "when I receive"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Scratch",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 46,
+        "content": "Which block can detect whether a key is being pressed?",
+        "correctAnswer": "key (space) pressed?",
+        "choices": ["when key pressed", "mouse down?", "key (space) pressed?", "touching color?"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Scratch",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 47,
+        "content": "What does the 'broadcast' block do in Scratch?",
+        "correctAnswer": "Sends a message to start other scripts",
+        "choices": ["Saves the game", "Sends a message to start other scripts", "Changes the costume", "Moves the sprite to another layer"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Scratch",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 48,
+        "content": "Which control block would you use to repeat actions until a condition is true?",
+        "correctAnswer": "repeat until",
+        "choices": ["forever", "repeat until", "if then", "wait until"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Scratch",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 49,
+        "content": "Which sensing block lets the sprite detect another sprite?",
+        "correctAnswer": "touching (sprite)?",
+        "choices": ["distance to (sprite)", "touching (sprite)?", "ask and wait", "mouse x"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Scratch",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 50,
+        "content": "Which block would you use to change the value of a variable?",
+        "correctAnswer": "change [variable] by 1",
+        "choices": ["set size to 100%", "change [variable] by 1", "show variable", "repeat"],
+        "points": 10,
+        "timeLimit": 45,
+        "category": "Scratch",
+        "difficulty": "medium",
+        "type": "implement"
+      }
     ],
-    "correctAnswer": "repeat 10"
-  },
-  {
-    "id": 162,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "Which control block runs code multiple times?",
-    "timeLimit":30,
-    "choices": [
-      "wait 1 sec",
-      "if then",
-      "repeat 10",
-      "broadcast message1"
-    ],
-    "correctAnswer": "repeat 10"
-  },
-  {
-    "id": 163,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "Which control block runs code multiple times?",
-    "timeLimit":30,
-    "choices": [
-      "wait 1 sec",
-      "broadcast message1",
-      "repeat 10",
-      "if then"
-    ],
-    "correctAnswer": "repeat 10"
-  },
-  {
-    "id": 164,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "Which control block runs code multiple times?",
-    "timeLimit":30,
-    "choices": [
-      "if then",
-      "repeat 10",
-      "wait 1 sec",
-      "broadcast message1"
-    ],
-    "correctAnswer": "repeat 10"
-  },
-  {
-    "id": 165,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "Which control block runs code multiple times?",
-    "timeLimit":30,
-    "choices": [
-      "broadcast message1",
-      "repeat 10",
-      "if then",
-      "wait 1 sec"
-    ],
-    "correctAnswer": "repeat 10"
-  },
-  {
-    "id": 166,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "Which control block runs code multiple times?",
-    "timeLimit":30,
-    "choices": [
-      "broadcast message1",
-      "repeat 10",
-      "wait 1 sec",
-      "if then"
-    ],
-    "correctAnswer": "repeat 10"
-  },
-  {
-    "id": 167,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "Which control block runs code multiple times?",
-    "timeLimit":30,
-    "choices": [
-      "broadcast message1",
-      "wait 1 sec",
-      "if then",
-      "repeat 10"
-    ],
-    "correctAnswer": "repeat 10"
-  },
-  {
-    "id": 168,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "Which control block runs code multiple times?",
-    "timeLimit":30,
-    "choices": [
-      "broadcast message1",
-      "if then",
-      "wait 1 sec",
-      "repeat 10"
-    ],
-    "correctAnswer": "repeat 10"
-  },
-  {
-    "id": 169,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "Which control block runs code multiple times?",
-    "timeLimit":30,
-    "choices": [
-      "wait 1 sec",
-      "broadcast message1",
-      "repeat 10",
-      "if then"
-    ],
-    "correctAnswer": "repeat 10"
-  },
-  {
-    "id": 170,
-    "category": "Scratch",
-    "difficulty": "medium",
-    "points": 5,
-    "type": "implement",
-    "content": "Which control block runs code multiple times?",
-    "timeLimit":30,
-    "choices": [
-      "broadcast message1",
-      "if then",
-      "repeat 10",
-      "wait 1 sec"
-    ],
-    "correctAnswer": "repeat 10"
-  },
-],
     'hard': [
-  {
-    "id": 51,
-    "content": "How can you create a timer that resets when a sprite is clicked?",
-    "correctAnswer": "Reset timer in the 'when this sprite clicked' block",
-    "choices": ["Broadcast 'reset' message", "Change timer by -timer", "Reset timer in the 'when this sprite clicked' block", "Set variable 'timer' to 0 in forever loop"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 52,
-    "content": "What is the best way to detect a collision between two moving sprites in Scratch?",
-    "correctAnswer": "Use 'touching [sprite]?' sensing block",
-    "choices": ["Compare x and y positions", "Use broadcast between sprites", "Use 'touching [sprite]?' sensing block", "Set variable to sprite name"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 53,
-    "content": "Which combination of blocks would allow you to make a sprite follow the mouse only when the mouse button is held down?",
-    "correctAnswer": "Use 'if mouse down?' with 'point towards mouse-pointer' and 'move'",
-    "choices": ["Use 'forever' and 'mouse x/y'", "Broadcast on mouse click", "Use 'if mouse down?' with 'point towards mouse-pointer' and 'move'", "Use 'glide to mouse-pointer'"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 54,
-    "content": "How would you keep a score from increasing multiple times when two sprites touch continuously?",
-    "correctAnswer": "Use a variable as a flag to allow only one score increase per touch",
-    "choices": ["Add a 'wait' block after score", "Broadcast after scoring", "Use a variable as a flag to allow only one score increase per touch", "Check touching only once per loop"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 55,
-    "content": "How do you make a sprite gradually fade out?",
-    "correctAnswer": "Use 'change ghost effect by 10' in a loop",
-    "choices": ["Use 'hide'", "Use 'change brightness by -10'", "Use 'change ghost effect by 10' in a loop", "Set costume to transparent"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 56,
-    "content": "What approach would you use to build a custom high score system that saves between game sessions?",
-    "correctAnswer": "Use the cloud variable feature for storing high scores",
-    "choices": ["Use broadcast to share score", "Use global variable", "Use the cloud variable feature for storing high scores", "Ask player to write it down"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 57,
-    "content": "How can you create a clone that behaves differently depending on when it was created?",
-    "correctAnswer": "Use a variable or list to track clone data at creation",
-    "choices": ["Use a broadcast", "Assign random motion", "Use a variable or list to track clone data at creation", "Clones cannot behave differently"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 58,
-    "content": "Which block would you use to create a custom block with its own set of instructions?",
-    "correctAnswer": "Make a block (My Blocks category)",
-    "choices": ["Define variable", "Make a block (My Blocks category)", "Broadcast and wait", "Create function"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 59,
-    "content": "What is the best way to manage enemy waves appearing over time in a game?",
-    "correctAnswer": "Use a loop with 'create clone' and 'wait' blocks",
-    "choices": ["Set number of clones at start", "Use one sprite per enemy", "Use a loop with 'create clone' and 'wait' blocks", "Change costume repeatedly"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "type": "implement"
-  },
-  {
-    "id": 60,
-    "content": "What technique allows you to simulate gravity for a jumping sprite?",
-    "correctAnswer": "Use a velocity variable and change y position each frame",
-    "choices": ["Glide to ground", "Point in direction 180", "Use a velocity variable and change y position each frame", "Use broadcast 'fall'"],
-    "points": 15,
-    "timeLimit": 60,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "type": "implement"
-  },{
-    "id": 171,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What block detects if two sprites are touching?",
-    "timeLimit":30,
-    "choices": [
-      "mouse down?",
-      "touching [sprite1]?",
-      "key space pressed?",
-      "distance to [mouse-pointer]"
-    ],
-    "correctAnswer": "touching [sprite1]?"
-  },
-  {
-    "id": 172,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What block detects if two sprites are touching?",
-    "timeLimit":30,
-    "choices": [
-      "key space pressed?",
-      "touching [sprite1]?",
-      "distance to [mouse-pointer]",
-      "mouse down?"
-    ],
-    "correctAnswer": "touching [sprite1]?"
-  },
-  {
-    "id": 173,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What block detects if two sprites are touching?",
-    "timeLimit":30,
-    "choices": [
-      "key space pressed?",
-      "distance to [mouse-pointer]",
-      "mouse down?",
-      "touching [sprite1]?"
-    ],
-    "correctAnswer": "touching [sprite1]?"
-  },
-  {
-    "id": 174,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What block detects if two sprites are touching?",
-    "timeLimit":30,
-    "choices": [
-      "touching [sprite1]?",
-      "distance to [mouse-pointer]",
-      "mouse down?",
-      "key space pressed?"
-    ],
-    "correctAnswer": "touching [sprite1]?"
-  },
-  {
-    "id": 175,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What block detects if two sprites are touching?",
-    "timeLimit":30,
-    "choices": [
-      "key space pressed?",
-      "mouse down?",
-      "touching [sprite1]?",
-      "distance to [mouse-pointer]"
-    ],
-    "correctAnswer": "touching [sprite1]?"
-  },
-  {
-    "id": 176,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What block detects if two sprites are touching?",
-    "timeLimit":30,
-    "choices": [
-      "distance to [mouse-pointer]",
-      "mouse down?",
-      "key space pressed?",
-      "touching [sprite1]?"
-    ],
-    "correctAnswer": "touching [sprite1]?"
-  },
-  {
-    "id": 177,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What block detects if two sprites are touching?",
-    "timeLimit":30,
-    "choices": [
-      "key space pressed?",
-      "distance to [mouse-pointer]",
-      "touching [sprite1]?",
-      "mouse down?"
-    ],
-    "correctAnswer": "touching [sprite1]?"
-  },
-  {
-    "id": 178,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What block detects if two sprites are touching?",
-    "timeLimit":30,
-    "choices": [
-      "touching [sprite1]?",
-      "mouse down?",
-      "distance to [mouse-pointer]",
-      "key space pressed?"
-    ],
-    "correctAnswer": "touching [sprite1]?"
-  },
-  {
-    "id": 179,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What block detects if two sprites are touching?",
-    "timeLimit":30,
-    "choices": [
-      "distance to [mouse-pointer]",
-      "mouse down?",
-      "touching [sprite1]?",
-      "key space pressed?"
-    ],
-    "correctAnswer": "touching [sprite1]?"
-  },
-  {
-    "id": 180,
-    "category": "Scratch",
-    "difficulty": "hard",
-    "points": 15,
-    "type": "implement",
-    "content": "What block detects if two sprites are touching?",
-    "timeLimit":30,
-    "choices": [
-      "touching [sprite1]?",
-      "distance to [mouse-pointer]",
-      "mouse down?",
-      "key space pressed?"
-    ],
-    "correctAnswer": "touching [sprite1]?"
-  },
-]
+      {
+        "id": 51,
+        "content": "How can you create a timer that resets when a sprite is clicked?",
+        "correctAnswer": "Reset timer in the 'when this sprite clicked' block",
+        "choices": ["Broadcast 'reset' message", "Change timer by -timer", "Reset timer in the 'when this sprite clicked' block", "Set variable 'timer' to 0 in forever loop"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Scratch",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 52,
+        "content": "What is the best way to detect a collision between two moving sprites in Scratch?",
+        "correctAnswer": "Use 'touching [sprite]?' sensing block",
+        "choices": ["Compare x and y positions", "Use broadcast between sprites", "Use 'touching [sprite]?' sensing block", "Set variable to sprite name"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Scratch",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 53,
+        "content": "Which combination of blocks would allow you to make a sprite follow the mouse only when the mouse button is held down?",
+        "correctAnswer": "Use 'if mouse down?' with 'point towards mouse-pointer' and 'move'",
+        "choices": ["Use 'forever' and 'mouse x/y'", "Broadcast on mouse click", "Use 'if mouse down?' with 'point towards mouse-pointer' and 'move'", "Use 'glide to mouse-pointer'"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Scratch",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 54,
+        "content": "How would you keep a score from increasing multiple times when two sprites touch continuously?",
+        "correctAnswer": "Use a variable as a flag to allow only one score increase per touch",
+        "choices": ["Add a 'wait' block after score", "Broadcast after scoring", "Use a variable as a flag to allow only one score increase per touch", "Check touching only once per loop"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Scratch",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 55,
+        "content": "How do you make a sprite gradually fade out?",
+        "correctAnswer": "Use 'change ghost effect by 10' in a loop",
+        "choices": ["Use 'hide'", "Use 'change brightness by -10'", "Use 'change ghost effect by 10' in a loop", "Set costume to transparent"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Scratch",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 56,
+        "content": "What approach would you use to build a custom high score system that saves between game sessions?",
+        "correctAnswer": "Use the cloud variable feature for storing high scores",
+        "choices": ["Use broadcast to share score", "Use global variable", "Use the cloud variable feature for storing high scores", "Ask player to write it down"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Scratch",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 57,
+        "content": "How can you create a clone that behaves differently depending on when it was created?",
+        "correctAnswer": "Use a variable or list to track clone data at creation",
+        "choices": ["Use a broadcast", "Assign random motion", "Use a variable or list to track clone data at creation", "Clones cannot behave differently"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Scratch",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 58,
+        "content": "Which block would you use to create a custom block with its own set of instructions?",
+        "correctAnswer": "Make a block (My Blocks category)",
+        "choices": ["Define variable", "Make a block (My Blocks category)", "Broadcast and wait", "Create function"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Scratch",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 59,
+        "content": "What is the best way to manage enemy waves appearing over time in a game?",
+        "correctAnswer": "Use a loop with 'create clone' and 'wait' blocks",
+        "choices": ["Set number of clones at start", "Use one sprite per enemy", "Use a loop with 'create clone' and 'wait' blocks", "Change costume repeatedly"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Scratch",
+        "difficulty": "hard",
+        "type": "implement"
+      },
+      {
+        "id": 60,
+        "content": "What technique allows you to simulate gravity for a jumping sprite?",
+        "correctAnswer": "Use a velocity variable and change y position each frame",
+        "choices": ["Glide to ground", "Point in direction 180", "Use a velocity variable and change y position each frame", "Use broadcast 'fall'"],
+        "points": 15,
+        "timeLimit": 60,
+        "category": "Scratch",
+        "difficulty": "hard",
+        "type": "implement"
+      }
+    ]
   },
   'HTML/CSS/Javascript': {
     'easy': [
@@ -1738,6 +1420,40 @@ const Game = () => {
   const currentQuestions = questionsByCategory[gameState.category][gameState.currentDifficulty];
 
   const getRandomUnusedQuestion = () => {
+    // First check if we have questions for the current category and difficulty
+    if (!currentQuestions || currentQuestions.length === 0) {
+      // If no questions available, try to move to next difficulty
+      if (gameState.currentDifficulty === 'easy') {
+        setGameState(prev => ({
+          ...prev,
+          currentDifficulty: 'medium',
+          currentQuestionIndex: 0,
+          usedQuestions: []
+        }));
+        return 0;
+      } else if (gameState.currentDifficulty === 'medium') {
+        setGameState(prev => ({
+          ...prev,
+          currentDifficulty: 'hard',
+          currentQuestionIndex: 0,
+          usedQuestions: []
+        }));
+        return 0;
+      } else {
+        // If we've used all questions in all difficulties, end the game
+        const storedTeams = localStorage.getItem('teams');
+        if (storedTeams) {
+          const teams = JSON.parse(storedTeams);
+          if (teams.length > 0) {
+            teams[0].score = gameState.score;
+            localStorage.setItem('teams', JSON.stringify(teams));
+          }
+        }
+        navigate('/leaderboard');
+        return -1;
+      }
+    }
+
     const availableQuestions = currentQuestions.filter((q, index) => 
       !gameState.usedQuestions.includes(index)
     );
@@ -1777,6 +1493,16 @@ const Game = () => {
     
     const randomIndex = Math.floor(Math.random() * availableQuestions.length);
     const questionIndex = currentQuestions.findIndex(q => q.id === availableQuestions[randomIndex].id);
+    
+    if (questionIndex === -1) {
+      // If we couldn't find the question, reset and try again
+      setGameState(prev => ({
+        ...prev,
+        usedQuestions: []
+      }));
+      return 0;
+    }
+    
     setGameState(prev => ({
       ...prev,
       usedQuestions: [...prev.usedQuestions, questionIndex]
