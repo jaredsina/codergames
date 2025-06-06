@@ -2094,6 +2094,7 @@ const Game = () => {
       setDiceResult(null);
       setCoachDiceResult(null);
       setMultiplierDiceResult(null);
+      setHasRolledMultiplier(false);
       setShowQuestion(false);
       setSelectedDifficulty(null);
       setHasCoachHelp(false);
