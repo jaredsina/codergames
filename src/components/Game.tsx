@@ -1607,7 +1607,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "What is the time complexity of searching for an element in an unsorted array?",
         "correctAnswer": "O(n)",
         "choices": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1618,7 +1618,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "Which data structure follows the Last In, First Out (LIFO) principle?",
         "correctAnswer": "Stack",
         "choices": ["Queue", "Stack", "Array", "Linked List"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1629,7 +1629,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "What will happen if you try to access an array element beyond its bounds in most programming languages?",
         "correctAnswer": "Runtime error or undefined behavior",
         "choices": ["Returns null", "Returns the last element", "Runtime error or undefined behavior", "Creates a new element"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1640,7 +1640,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "In object-oriented programming, what does 'inheritance' allow you to do?",
         "correctAnswer": "Create new classes based on existing classes",
         "choices": ["Share variables between functions", "Create new classes based on existing classes", "Access private variables", "Combine multiple files"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1651,7 +1651,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "What is the difference between pass-by-value and pass-by-reference?",
         "correctAnswer": "Pass-by-value copies the data, pass-by-reference passes the memory address",
         "choices": ["No difference", "Pass-by-value copies the data, pass-by-reference passes the memory address", "Pass-by-value is faster", "Pass-by-reference copies the data"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1662,7 +1662,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "Which sorting algorithm has the best average-case time complexity?",
         "correctAnswer": "Merge Sort",
         "choices": ["Bubble Sort", "Selection Sort", "Merge Sort", "Insertion Sort"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1673,7 +1673,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "What is recursion in programming?",
         "correctAnswer": "A function that calls itself",
         "choices": ["A loop that runs indefinitely", "A function that calls itself", "Multiple functions calling each other", "Reusing code in different files"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1684,7 +1684,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "In a binary search tree, what is true about the left child of any node?",
         "correctAnswer": "It is smaller than the parent node",
         "choices": ["It is larger than the parent node", "It is smaller than the parent node", "It is always null", "It has no specific relationship"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1695,7 +1695,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "What is the purpose of exception handling in programming?",
         "correctAnswer": "To gracefully handle runtime errors",
         "choices": ["To prevent compilation errors", "To gracefully handle runtime errors", "To optimize code performance", "To debug syntax errors"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1706,7 +1706,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "Which of these is NOT a characteristic of object-oriented programming?",
         "correctAnswer": "Global state management",
         "choices": ["Encapsulation", "Inheritance", "Polymorphism", "Global state management"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1717,7 +1717,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "What is the main advantage of using a hash table?",
         "correctAnswer": "Fast average-case lookup time O(1)",
         "choices": ["Maintains sorted order", "Fast average-case lookup time O(1)", "Uses less memory", "Easier to implement"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1728,7 +1728,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "In database design, what does normalization help achieve?",
         "correctAnswer": "Reduces data redundancy and improves data integrity",
         "choices": ["Increases query speed", "Reduces data redundancy and improves data integrity", "Makes tables larger", "Simplifies database structure"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1739,7 +1739,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "What is the difference between a compiler and an interpreter?",
         "correctAnswer": "Compiler translates entire program before execution, interpreter executes line by line",
         "choices": ["No difference", "Compiler translates entire program before execution, interpreter executes line by line", "Compiler is faster to start", "Interpreter creates executable files"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1750,7 +1750,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "What is a deadlock in concurrent programming?",
         "correctAnswer": "When two or more processes wait indefinitely for each other",
         "choices": ["When a program stops responding", "When two or more processes wait indefinitely for each other", "When memory runs out", "When a loop runs forever"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1761,7 +1761,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "Which design pattern is used to ensure a class has only one instance?",
         "correctAnswer": "Singleton",
         "choices": ["Factory", "Observer", "Singleton", "Strategy"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1772,7 +1772,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "What is the space complexity of a recursive function that makes n recursive calls with each call using constant space?",
         "correctAnswer": "O(n)",
         "choices": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1783,7 +1783,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "In version control systems like Git, what does 'merging' accomplish?",
         "correctAnswer": "Combines changes from different branches",
         "choices": ["Deletes old code", "Combines changes from different branches", "Creates a backup", "Uploads code to server"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1794,7 +1794,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "What is the primary purpose of unit testing?",
         "correctAnswer": "Test individual components in isolation",
         "choices": ["Test the entire application", "Test individual components in isolation", "Test user interface", "Test database connections"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1805,7 +1805,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "Which HTTP status code indicates a successful request?",
         "correctAnswer": "200",
         "choices": ["404", "500", "200", "301"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1816,7 +1816,7 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "content": "What is the main difference between abstract classes and interfaces?",
         "correctAnswer": "Abstract classes can have implementation, interfaces cannot",
         "choices": ["No difference", "Abstract classes can have implementation, interfaces cannot", "Interfaces are faster", "Abstract classes are newer"],
-        "points": 10,
+        "points": 15,
         "timeLimit": 30,
         "category": "Round 2",
         "difficulty": "medium",
@@ -1830,14 +1830,17 @@ const Game = () => {
   const navigate = useNavigate();
   const [diceResult, setDiceResult] = useState<number | null>(null);
   const [coachDiceResult, setCoachDiceResult] = useState<number | null>(null);
+  const [multiplierDiceResult, setMultiplierDiceResult] = useState<number | null>(null);
   const [showQuestion, setShowQuestion] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | null>(null);
   const [hasCoachHelp, setHasCoachHelp] = useState(false);
   const [hasRolledDifficulty, setHasRolledDifficulty] = useState(false);
   const [hasRolledCoach, setHasRolledCoach] = useState(false);
+  const [hasRolledMultiplier, setHasRolledMultiplier] = useState(false);
   const [currentAnswer, setCurrentAnswer] = useState('');
   const [isRollingDifficulty, setIsRollingDifficulty] = useState(false);
   const [isRollingCoach, setIsRollingCoach] = useState(false);
+  const [isRollingMultiplier, setIsRollingMultiplier] = useState(false);
 
   const [gameState, setGameState] = useState<GameState>({
     category: localStorage.getItem('selectedCategory') as Category || 'Python',
@@ -1946,33 +1949,31 @@ const Game = () => {
   };
 
   const rollDifficultyDice = () => {
-    if (hasRolledDifficulty) return;
+    if (hasRolledDifficulty) return; // Prevent rolling if already rolled
+    
     setIsRollingDifficulty(true);
-    setShowQuestion(false);
-    // Simulate dice rolling animation
+    let rolls = 0;
+    const maxRolls = 10;
     const rollInterval = setInterval(() => {
-      setDiceResult(Math.floor(Math.random() * 6) + 1);
-    }, 100);
-
-    // Stop rolling after 1 second
-    setTimeout(() => {
-      clearInterval(rollInterval);
-      const finalResult = Math.floor(Math.random() * 6) + 1;
-      setDiceResult(finalResult);
-      setIsRollingDifficulty(false);
-      setHasRolledDifficulty(true);
+      const result = Math.floor(Math.random() * 6) + 1;
+      setDiceResult(result);
+      rolls++;
       
-      // Set difficulty based on dice roll
-      let newDifficulty: Difficulty;
-      if (finalResult <= 2) {
-        newDifficulty = 'easy';
-      } else if (finalResult <= 4) {
-        newDifficulty = 'medium';
-      } else {
-        newDifficulty = 'hard';
+      if (rolls >= maxRolls) {
+        clearInterval(rollInterval);
+        setIsRollingDifficulty(false);
+        setHasRolledDifficulty(true);
+        
+        // Set difficulty based on roll
+        if (result <= 2) {
+          setSelectedDifficulty('easy');
+        } else if (result <= 4) {
+          setSelectedDifficulty('medium');
+        } else {
+          setSelectedDifficulty('hard');
+        }
       }
-      setSelectedDifficulty(newDifficulty);
-    }, 1000);
+    }, 100);
   };
 
   const rollCoachDice = () => {
@@ -1993,6 +1994,25 @@ const Game = () => {
       // Set coach help if coach dice is 1, 2, or 3 (30% chance)
       setHasCoachHelp(finalResult <= 3);
     }, 1000);
+  };
+
+  const rollMultiplierDice = () => {
+    if (hasRolledMultiplier) return; // Prevent rolling if already rolled
+    
+    setIsRollingMultiplier(true);
+    let rolls = 0;
+    const maxRolls = 10;
+    const rollInterval = setInterval(() => {
+      const result = Math.floor(Math.random() * 3) + 1;
+      setMultiplierDiceResult(result);
+      rolls++;
+      
+      if (rolls >= maxRolls) {
+        clearInterval(rollInterval);
+        setIsRollingMultiplier(false);
+        setHasRolledMultiplier(true);
+      }
+    }, 100);
   };
 
   const handleContinue = () => {
@@ -2060,17 +2080,20 @@ const Game = () => {
     if (currentAnswer.trim()) {
       const currentQuestion = currentQuestions[gameState.currentQuestionIndex];
       const isCorrect = currentAnswer.trim() === currentQuestion.correctAnswer;
+      const multiplier = multiplierDiceResult || 1;
+      const pointsToAdd = isCorrect ? currentQuestion.points * multiplier : 0;
       
       if (isCorrect) {
         setGameState(prev => ({
           ...prev,
-          score: prev.score + currentQuestion.points
+          score: prev.score + pointsToAdd
         }));
       }
       
       setCurrentAnswer('');
       setDiceResult(null);
       setCoachDiceResult(null);
+      setMultiplierDiceResult(null);
       setShowQuestion(false);
       setSelectedDifficulty(null);
       setHasCoachHelp(false);
@@ -2319,7 +2342,7 @@ const Game = () => {
                     color="primary"
                     size="large"
                     onClick={rollDifficultyDice}
-                    disabled={isRollingDifficulty || isRollingCoach || hasRolledDifficulty}
+                    disabled={isRollingDifficulty || hasRolledDifficulty}
                     sx={{ 
                       bgcolor: 'primary.main',
                       '&:hover': {
@@ -2327,7 +2350,7 @@ const Game = () => {
                       },
                     }}
                   >
-                    Roll Difficulty
+                    {hasRolledDifficulty ? 'Difficulty Set' : 'Roll Difficulty'}
                   </Button>
                   {diceResult && (
                     <Typography variant="h4" color="primary">
@@ -2357,6 +2380,31 @@ const Game = () => {
                   {coachDiceResult && (
                     <Typography variant="h4" color="secondary">
                       {coachDiceResult}
+                    </Typography>
+                  )}
+                </Box>
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
+                  <Typography variant="subtitle1" color="text.secondary">
+                    Points Multiplier Dice
+                  </Typography>
+                  <Button
+                    variant="contained"
+                    color="success"
+                    size="large"
+                    onClick={rollMultiplierDice}
+                    disabled={isRollingMultiplier || hasRolledMultiplier}
+                    sx={{ 
+                      bgcolor: 'success.main',
+                      '&:hover': {
+                        bgcolor: 'success.dark',
+                      },
+                    }}
+                  >
+                    {hasRolledMultiplier ? 'Multiplier Set' : 'Roll Multiplier'}
+                  </Button>
+                  {multiplierDiceResult && (
+                    <Typography variant="h4" color="success.main">
+                      {multiplierDiceResult}x
                     </Typography>
                   )}
                 </Box>
