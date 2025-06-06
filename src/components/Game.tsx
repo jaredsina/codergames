@@ -1601,7 +1601,228 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
   }
 ],
     'medium': [],
-    'hard': []
+    'hard': [
+      {
+        "id": 236,
+        "content": "What is the time complexity of searching for an element in an unsorted array?",
+        "correctAnswer": "O(n)",
+        "choices": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 237,
+        "content": "Which data structure follows the Last In, First Out (LIFO) principle?",
+        "correctAnswer": "Stack",
+        "choices": ["Queue", "Stack", "Array", "Linked List"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 238,
+        "content": "What will happen if you try to access an array element beyond its bounds in most programming languages?",
+        "correctAnswer": "Runtime error or undefined behavior",
+        "choices": ["Returns null", "Returns the last element", "Runtime error or undefined behavior", "Creates a new element"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 239,
+        "content": "In object-oriented programming, what does 'inheritance' allow you to do?",
+        "correctAnswer": "Create new classes based on existing classes",
+        "choices": ["Share variables between functions", "Create new classes based on existing classes", "Access private variables", "Combine multiple files"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 240,
+        "content": "What is the difference between pass-by-value and pass-by-reference?",
+        "correctAnswer": "Pass-by-value copies the data, pass-by-reference passes the memory address",
+        "choices": ["No difference", "Pass-by-value copies the data, pass-by-reference passes the memory address", "Pass-by-value is faster", "Pass-by-reference copies the data"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 241,
+        "content": "Which sorting algorithm has the best average-case time complexity?",
+        "correctAnswer": "Merge Sort",
+        "choices": ["Bubble Sort", "Selection Sort", "Merge Sort", "Insertion Sort"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 242,
+        "content": "What is recursion in programming?",
+        "correctAnswer": "A function that calls itself",
+        "choices": ["A loop that runs indefinitely", "A function that calls itself", "Multiple functions calling each other", "Reusing code in different files"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 243,
+        "content": "In a binary search tree, what is true about the left child of any node?",
+        "correctAnswer": "It is smaller than the parent node",
+        "choices": ["It is larger than the parent node", "It is smaller than the parent node", "It is always null", "It has no specific relationship"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 244,
+        "content": "What is the purpose of exception handling in programming?",
+        "correctAnswer": "To gracefully handle runtime errors",
+        "choices": ["To prevent compilation errors", "To gracefully handle runtime errors", "To optimize code performance", "To debug syntax errors"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 245,
+        "content": "Which of these is NOT a characteristic of object-oriented programming?",
+        "correctAnswer": "Global state management",
+        "choices": ["Encapsulation", "Inheritance", "Polymorphism", "Global state management"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 246,
+        "content": "What is the main advantage of using a hash table?",
+        "correctAnswer": "Fast average-case lookup time O(1)",
+        "choices": ["Maintains sorted order", "Fast average-case lookup time O(1)", "Uses less memory", "Easier to implement"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 247,
+        "content": "In database design, what does normalization help achieve?",
+        "correctAnswer": "Reduces data redundancy and improves data integrity",
+        "choices": ["Increases query speed", "Reduces data redundancy and improves data integrity", "Makes tables larger", "Simplifies database structure"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 248,
+        "content": "What is the difference between a compiler and an interpreter?",
+        "correctAnswer": "Compiler translates entire program before execution, interpreter executes line by line",
+        "choices": ["No difference", "Compiler translates entire program before execution, interpreter executes line by line", "Compiler is faster to start", "Interpreter creates executable files"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 249,
+        "content": "What is a deadlock in concurrent programming?",
+        "correctAnswer": "When two or more processes wait indefinitely for each other",
+        "choices": ["When a program stops responding", "When two or more processes wait indefinitely for each other", "When memory runs out", "When a loop runs forever"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 250,
+        "content": "Which design pattern is used to ensure a class has only one instance?",
+        "correctAnswer": "Singleton",
+        "choices": ["Factory", "Observer", "Singleton", "Strategy"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 251,
+        "content": "What is the space complexity of a recursive function that makes n recursive calls with each call using constant space?",
+        "correctAnswer": "O(n)",
+        "choices": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 252,
+        "content": "In version control systems like Git, what does 'merging' accomplish?",
+        "correctAnswer": "Combines changes from different branches",
+        "choices": ["Deletes old code", "Combines changes from different branches", "Creates a backup", "Uploads code to server"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 253,
+        "content": "What is the primary purpose of unit testing?",
+        "correctAnswer": "Test individual components in isolation",
+        "choices": ["Test the entire application", "Test individual components in isolation", "Test user interface", "Test database connections"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 254,
+        "content": "Which HTTP status code indicates a successful request?",
+        "correctAnswer": "200",
+        "choices": ["404", "500", "200", "301"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 255,
+        "content": "What is the main difference between abstract classes and interfaces?",
+        "correctAnswer": "Abstract classes can have implementation, interfaces cannot",
+        "choices": ["No difference", "Abstract classes can have implementation, interfaces cannot", "Interfaces are faster", "Abstract classes are newer"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      }
+    ]
   }
 };
 
