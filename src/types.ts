@@ -1,4 +1,4 @@
-export type Category = 'Python' | 'Scratch' | 'HTML/CSS/Javascript';
+export type Category = 'Python' | 'Scratch' | 'HTML/CSS/Javascript' | 'Round 2';
 export type Difficulty = 'easy' | 'medium' | 'hard';
 
 export interface Question {

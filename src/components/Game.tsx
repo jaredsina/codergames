@@ -12,7 +12,7 @@ import {
 import { GameState, Question } from '../types';
 import React from 'react';
 
-type Category = 'Python' | 'Scratch' | 'HTML/CSS/Javascript';
+type Category = 'Python' | 'Scratch' | 'HTML/CSS/Javascript' | 'Round 2';
 type Difficulty = 'easy' | 'medium' | 'hard';
 
 const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
@@ -1376,6 +1376,232 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
         "type": "implement"
       }
     ]
+  },
+  'Round 2': {
+    'easy': [
+  {
+    "id": 235,
+    "content": "Which coding concept would you use to store a player's name in your program?",
+    "correctAnswer": "Variables",
+    "choices": ["Functions", "Variables", "Loops", "Comments"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 216,
+    "content": "You want to repeat the same action 10 times. Which concept should you use?",
+    "correctAnswer": "Loops",
+    "choices": ["If statements", "Variables", "Loops", "Functions"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 217,
+    "content": "Which of these is the correct way to write a comment in most programming languages?",
+    "correctAnswer": "// This is a comment",
+    "choices": ["This is a comment", "// This is a comment", "This is a comment //", "comment: This is a comment"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 218,
+    "content": "You need to check if a player's score is greater than 100 to award a bonus. What do you need?",
+    "correctAnswer": "An if statement",
+    "choices": ["A loop", "A variable", "An if statement", "A function"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 219,
+    "content": "What data type would be best for storing whether a player has completed a level?",
+    "correctAnswer": "Boolean",
+    "choices": ["String", "Integer", "Boolean", "Float"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 220,
+    "content": "Which concept allows you to group related code together and reuse it multiple times?",
+    "correctAnswer": "Functions",
+    "choices": ["Variables", "Functions", "Comments", "Data types"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 221,
+    "content": "You want to store the numbers 1, 2, 3, 4, 5 together. What should you use?",
+    "correctAnswer": "An array/list",
+    "choices": ["Five separate variables", "An array/list", "A boolean", "A comment"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 222,
+    "content": "What will this code likely do: while health > 0:",
+    "correctAnswer": "Keep running as long as health is above 0",
+    "choices": ["Set health to 0", "Keep running as long as health is above 0", "Run exactly once", "Never run"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 223,
+    "content": "Which data type is best for storing a player's age?",
+    "correctAnswer": "Integer",
+    "choices": ["String", "Boolean", "Integer", "Array"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 224,
+    "content": "You want to display different messages based on a player's level (beginner, intermediate, advanced). What's the best approach?",
+    "correctAnswer": "Use multiple if statements",
+    "choices": ["Use multiple if statements", "Use a loop", "Use only variables", "Use comments"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 225,
+    "content": "What does 'debugging' mean in programming?",
+    "correctAnswer": "Finding and fixing errors",
+    "choices": ["Adding new features", "Finding and fixing errors", "Writing comments", "Creating variables"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 226,
+    "content": "Which symbol is commonly used for assignment in most programming languages?",
+    "correctAnswer": "=",
+    "choices": ["==", "=", "!=", "<>"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 227,
+    "content": "You need to go through each item in a shopping list and print it. What concept do you need?",
+    "correctAnswer": "A loop",
+    "choices": ["Variables only", "Functions only", "A loop", "Comments"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 228,
+    "content": "What's the difference between = and == in most programming languages?",
+    "correctAnswer": "= assigns a value, == compares values",
+    "choices": ["No difference", "= assigns a value, == compares values", "= compares values, == assigns a value", "Both are used for comments"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 229,
+    "content": "Which concept would help you organize code for different types of game characters (player, enemy, NPC)?",
+    "correctAnswer": "Classes/Objects",
+    "choices": ["Variables", "Classes/Objects", "Comments", "Loops"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 230,
+    "content": "What data type would you use to store a player's username?",
+    "correctAnswer": "String",
+    "choices": ["Integer", "Boolean", "String", "Float"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 231,
+    "content": "You want to create a block of code that calculates tax and use it in multiple places. What should you create?",
+    "correctAnswer": "A function",
+    "choices": ["A variable", "A comment", "A function", "A loop"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 232,
+    "content": "Which of these represents a condition in programming?",
+    "correctAnswer": "x == 5",
+    "choices": ["x = 5", "x == 5", "// x is 5", "print(x)"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 233,
+    "content": "What happens in an infinite loop?",
+    "correctAnswer": "The code runs forever",
+    "choices": ["The code runs forever", "The code runs once", "The code never runs", "The code produces an error immediately"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  },
+  {
+    "id": 234,
+    "content": "You need to store information about a car (make, model, year, color). What's the best approach?",
+    "correctAnswer": "An object/class with properties",
+    "choices": ["Separate variables for each piece of information", "One string with all information", "An object/class with properties", "Multiple arrays"],
+    "points": 5,
+    "timeLimit": 30,
+    "category": "Round 2",
+    "difficulty": "easy",
+    "type": "implement"
+  }
+],
+    'medium': [],
+    'hard': []
   }
 };
 

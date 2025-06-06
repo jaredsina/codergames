@@ -279,6 +279,7 @@ const Home = () => {
                 <MenuItem value="Python">Python</MenuItem>
                 <MenuItem value="Scratch">Scratch</MenuItem>
                 <MenuItem value="HTML/CSS/Javascript">HTML/CSS/Javascript</MenuItem>
+                <MenuItem value="Round 2">Round 2</MenuItem>
               </Select>
             </FormControl>
 
