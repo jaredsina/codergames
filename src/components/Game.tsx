@@ -2345,9 +2345,11 @@ const Game = () => {
       setMultiplierDiceResult(null);
       setHasRolledMultiplier(false);
     } else {
+      // Don't reset the counter, just end the game
       setGameState(prev => ({
         ...prev,
-        isGameOver: true
+        isGameOver: true,
+        currentQuestionIndex: maxQuestions - 1 // Keep the counter at the last question
       }));
     }
   };
