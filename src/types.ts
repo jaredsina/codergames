@@ -24,4 +24,7 @@ export interface GameState {
   isBreak: boolean;
   mainTimeRemaining: number;
   mainTimerPaused: boolean;
+  isGameStarted: boolean;
+  isGameOver: boolean;
+  selectedCategory: Category;
 } 

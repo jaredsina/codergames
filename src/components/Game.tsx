@@ -1600,7 +1600,228 @@ const questionsByCategory: Record<Category, Record<Difficulty, Question[]>> = {
     "type": "implement"
   }
 ],
-    'medium': [],
+    'medium': [
+      {
+        "id": 256,
+        "content": "Which coding concept would you use to check when a player touches lava and remove life?",
+        "correctAnswer": "if statement",
+        "choices": ["if statement", "loops", "objects and classes", "data types"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 257,
+        "content": "What data type would be best to store a player's name in a game?",
+        "correctAnswer": "string",
+        "choices": ["integer", "boolean", "string", "float"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 258,
+        "content": "Which loop structure would be most appropriate to display all items in a shopping cart?",
+        "correctAnswer": "for loop",
+        "choices": ["if statement", "for loop", "function", "variable"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 259,
+        "content": "What programming concept allows you to group related data and functions together?",
+        "correctAnswer": "classes",
+        "choices": ["variables", "loops", "classes", "conditionals"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 260,
+        "content": "Which concept would you use to repeat code until a specific condition is met?",
+        "correctAnswer": "while loop",
+        "choices": ["function", "while loop", "array", "boolean"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 261,
+        "content": "What would you use to store multiple related values like a list of high scores?",
+        "correctAnswer": "array",
+        "choices": ["string", "integer", "array", "boolean"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 262,
+        "content": "Which concept would help you avoid repeating the same code multiple times?",
+        "correctAnswer": "functions",
+        "choices": ["variables", "functions", "data types", "comments"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 263,
+        "content": "What data type would you use to store whether a game is paused or not?",
+        "correctAnswer": "boolean",
+        "choices": ["string", "integer", "float", "boolean"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 264,
+        "content": "Which structure would you use to make different things happen based on a player's choice?",
+        "correctAnswer": "if-else statement",
+        "choices": ["for loop", "if-else statement", "array", "function"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 265,
+        "content": "What concept allows you to store and retrieve data using names?",
+        "correctAnswer": "variables",
+        "choices": ["loops", "variables", "functions", "classes"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 266,
+        "content": "Which data structure would be best for storing key-value pairs like player names and scores?",
+        "correctAnswer": "dictionary/object",
+        "choices": ["array", "string", "dictionary/object", "boolean"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 267,
+        "content": "What would you use to execute code a specific number of times?",
+        "correctAnswer": "for loop",
+        "choices": ["if statement", "variable", "for loop", "class"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 268,
+        "content": "Which concept helps organize code into reusable blocks that can accept input?",
+        "correctAnswer": "functions",
+        "choices": ["arrays", "functions", "loops", "variables"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 269,
+        "content": "What would you use to handle errors that might occur during program execution?",
+        "correctAnswer": "try-catch blocks",
+        "choices": ["if statements", "loops", "try-catch blocks", "arrays"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 270,
+        "content": "Which concept would you use to create multiple similar objects with the same properties?",
+        "correctAnswer": "constructor/class",
+        "choices": ["function", "array", "constructor/class", "variable"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 271,
+        "content": "What data type would be most appropriate for storing a player's score?",
+        "correctAnswer": "integer",
+        "choices": ["string", "boolean", "integer", "array"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 272,
+        "content": "Which concept would you use to access individual elements in a list?",
+        "correctAnswer": "indexing",
+        "choices": ["looping", "indexing", "functions", "classes"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 273,
+        "content": "What would you use to combine multiple conditions in a single if statement?",
+        "correctAnswer": "logical operators",
+        "choices": ["loops", "arrays", "logical operators", "functions"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 274,
+        "content": "Which concept allows you to modify the behavior of existing code without changing it directly?",
+        "correctAnswer": "inheritance",
+        "choices": ["variables", "loops", "inheritance", "arrays"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      },
+      {
+        "id": 275,
+        "content": "What would you use to ensure code runs only when certain conditions are true?",
+        "correctAnswer": "conditional statements",
+        "choices": ["functions", "conditional statements", "arrays", "loops"],
+        "points": 10,
+        "timeLimit": 30,
+        "category": "Round 2",
+        "difficulty": "medium",
+        "type": "implement"
+      }
+    ],
     'hard': [
       {
         "id": 236,
