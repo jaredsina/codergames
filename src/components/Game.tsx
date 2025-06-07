@@ -1852,7 +1852,11 @@ const Game = () => {
     usedQuestions: [],
     isBreak: false,
     mainTimeRemaining: 1800,
-    mainTimerPaused: false
+    mainTimerPaused: false,
+    isGameStarted: false,
+    isGameOver: false,
+    selectedCategory: localStorage.getItem('selectedCategory') as Category || 'Python',
+    usedQuestionIds: new Set()
   });
 
   const currentQuestions = questionsByCategory[gameState.category]?.[gameState.currentDifficulty] || [];
@@ -2104,20 +2108,26 @@ const Game = () => {
   };
 
   const handleNextQuestion = () => {
-    const newQuestionIndex = getRandomUnusedQuestion();
-    if (newQuestionIndex >= 0) {  // Only update if we got a valid question index
+    const maxQuestions = gameState.selectedCategory === 'Round 2' ? 20 : 10;
+    if (gameState.currentQuestionIndex < maxQuestions - 1) {
       setGameState(prev => ({
         ...prev,
-        currentQuestionIndex: newQuestionIndex
+        currentQuestionIndex: prev.currentQuestionIndex + 1
       }));
-      setCurrentAnswer('');
-      setDiceResult(null);
-      setCoachDiceResult(null);
       setShowQuestion(false);
       setSelectedDifficulty(null);
-      setHasCoachHelp(false);
       setHasRolledDifficulty(false);
       setHasRolledCoach(false);
+      setHasCoachHelp(false);
+      setDiceResult(null);
+      setCoachDiceResult(null);
+      setMultiplierDiceResult(null);
+      setHasRolledMultiplier(false);
+    } else {
+      setGameState(prev => ({
+        ...prev,
+        isGameOver: true
+      }));
     }
   };
 
@@ -2459,6 +2469,9 @@ const Game = () => {
               <Typography variant="h5" color="text.primary">
                 Your question will be {selectedDifficulty?.toUpperCase()}
               </Typography>
+              <Typography variant="h4" color="primary">
+                You rolled a {multiplierDiceResult}x multiplier!
+              </Typography>
               {hasCoachHelp && (
                 <Typography variant="h5" color="success.main" sx={{ fontWeight: 'bold' }}>
                   You got coach help for this question!
@@ -2491,6 +2504,9 @@ const Game = () => {
               </Typography>
               <Typography variant="h6" gutterBottom>
                 Difficulty: {gameState.currentDifficulty.toUpperCase()}
+              </Typography>
+              <Typography variant="h6" gutterBottom>
+                Multiplier: {multiplierDiceResult}x
               </Typography>
               {hasCoachHelp && (
                 <Typography variant="h6" color="success.main" gutterBottom>
