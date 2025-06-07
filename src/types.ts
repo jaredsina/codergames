@@ -27,4 +27,5 @@ export interface GameState {
   isGameStarted: boolean;
   isGameOver: boolean;
   selectedCategory: Category;
+  usedQuestionIds: Set<number>;
 } 
